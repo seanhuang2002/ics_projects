@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adress.view.WebController">
+    <children>
+      <AnchorPane prefHeight="200.0" prefWidth="700.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="700.0">
+               <center>
+                    <BorderPane prefHeight="371.0" prefWidth="431.0" BorderPane.alignment="CENTER">
+                        <center>
+                            <WebView fx:id="webView" prefHeight="450.0" prefWidth="500.0" />
+                        </center>
+                     <top>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <items>
+                              <ComboBox fx:id="comboBox" prefWidth="100.0" promptText="History" />
+                                    <TextField fx:id="txtURL" onAction="#goAction" prefHeight="27.0" prefWidth="412.0" />
+                            <Button mnemonicParsing="false" onAction="#handleBack" text="Back" />
+                              <Button mnemonicParsing="false" onAction="#handleForward" text="Forward" />
+                              <Button mnemonicParsing="false" onAction="#goAction" text="Go" />
+                          </items>
+                        </ToolBar>
+                     </top>
+                    </BorderPane>
+               </center>
+               <top>
+                  <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#copy" text="Copy" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

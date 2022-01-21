@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.highlow.HighLowController">
+   <children>
+      <Label layoutX="151.0" layoutY="31.0" text="HighLow">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="60.0" text="Click on your choice" />
+      <HBox layoutX="118.0" layoutY="394.0" prefHeight="27.0" prefWidth="239.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" text="Higher" />
+            <Button mnemonicParsing="false" text="Lower" />
+            <Button mnemonicParsing="false" text="Play Again" />
+         </children>
+      </HBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="58.0" layoutX="18.0" layoutY="378.0" stroke="BLACK" strokeType="INSIDE" width="365.0" />
+      <HBox layoutX="43.0" layoutY="399.0" prefHeight="17.0" prefWidth="59.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="44.0" text="Score: " />
+            <Label fx:id="labelScore" text="0" />
+         </children>
+      </HBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#159731" height="268.0" layoutX="19.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="365.0" />
+      <ImageView fx:id="firstCardView" fitHeight="154.0" fitWidth="125.0" layoutX="43.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="newCardView" fitHeight="154.0" fitWidth="125.0" layoutX="232.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

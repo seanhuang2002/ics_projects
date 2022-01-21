@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="250.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.NewAccountWindowController">
+   <children>
+      <Label layoutX="113.0" layoutY="27.0" text="Create New Account">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="33.0" layoutY="65.0" prefHeight="120.0" prefWidth="336.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.01095581054688" minWidth="10.0" prefWidth="145.06300354003906" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.93699645996094" minWidth="10.0" prefWidth="190.93699645996094" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Username:" />
+            <Label text="Password:" GridPane.rowIndex="1" />
+            <Label text="Employee Code:" GridPane.rowIndex="3" />
+            <Label text="Confirm Password:" GridPane.rowIndex="2" />
+            <PasswordField fx:id="fieldPass" promptText="Enter Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="fieldConfirm" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <PasswordField fx:id="fieldCode" promptText="Enter Employee Code" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="fieldUser" promptText="Entre Desired Username" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button layoutX="224.0" layoutY="199.0" mnemonicParsing="false" onAction="#createAccount" text="Create New Account" />
+   </children>
+</AnchorPane>

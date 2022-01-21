@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <children>
+      <BorderPane prefHeight="700.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Fichier">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Quitter" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Aide">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleInstructions" text="Instructions" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="À Propos">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="À Propos" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.7115097159940209" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TabPane fx:id="tabPane" layoutX="62.0" layoutY="117.0" prefHeight="331.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <tabs>
+                            <Tab onSelectionChanged="#clearBox" text="Accueil">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="83.0" layoutY="27.0" text="Projet de Français : Frise des Movement Littéraires" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="27.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Text layoutX="47.0" layoutY="350.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à notre projet sur les mouvements littéraires. En bas, on a un frise chronologique intéractif, cliquez sur un mouvement. Ceci c'est le projet de Sean Huang, Nathalie Jeans, Tanya Chen et Laila Hayashi fait pour la classe de français de Mme Ben-Mansour. Notez que Java est requis pour ouvrir cette programme. " wrappingWidth="504.22216796875" />
+                                          <ImageView fx:id="image" fitHeight="233.0" fitWidth="393.0" layoutX="124.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content></Tab>
+                              <Tab fx:id="tabXVI" onSelectionChanged="#selectNewCentury" text="XVIe siècle">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Accordion fx:id="accordionXVI" layoutX="64.0" layoutY="48.0" prefHeight="85.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <panes>
+                                              <TitledPane fx:id="paneHumanisme" animated="false" onMouseClicked="#openHumanisme" onMousePressed="#clearLabel" text="L'Humanisme">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button fx:id="buttLitHumanisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                  <Button fx:id="buttMusHumanisme" mnemonicParsing="false" onAction="#startHumanismeMusic" text="Musique" />
+                                                                  <Button fx:id="buttArtHumanisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                               </children>
+                                                            </HBox>
+                                                            <ImageView fx:id="imageHumanisme" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                            <Label layoutX="38.0" layoutY="26.0" text="L'HUMANISME" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="25.0">
+                                                               <font>
+                                                                  <Font name="System Bold" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Text layoutX="38.0" layoutY="136.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ce mouvement intellectuel et culturel européen de la Renaissance est supporté par la notion de laïcité. Il met l’Homme au centre de ces oeuvres au lieu de la Divinité." wrappingWidth="225.81298828125">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="36.0" layoutY="306.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : Sort des Moyen Âges, les Grands Découverts, le Protestantisme" wrappingWidth="229.2333984375">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Label layoutX="401.0" layoutY="317.0" text="François Rabelais" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </TitledPane>
+                                                <TitledPane fx:id="panePleiade" animated="false" onMouseClicked="#openPleiade" onMousePressed="#clearLabel" text="Le Pléiade">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button fx:id="buttLitPleiade" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                  <Button fx:id="buttArtPleiade" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                               </children>
+                                                            </HBox>
+                                                            <ImageView fx:id="imagePleiade" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                            <Label layoutX="38.0" layoutY="36.0" text="LE PLÉIADE" AnchorPane.topAnchor="25.0">
+                                                               <font>
+                                                                  <Font name="System Bold" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Text layoutX="38.0" layoutY="93.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le français a été considéré comme étant la langue vulgaire du peuple, lorsque le latin été utilisé en tant que langue littéraire. Le mouvement littéraire Pléiade voulait réinventer la perception de la langue français en l’ employant dans des contextes plutôt sophistiqués. Les auteurs de ce mouvement représentait l’élite intellectuelle et choisissait des mouvements à propos de l’immortalité et la gloire." wrappingWidth="266.62451171875">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="38.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : Guerres de religion, le Renaissance" wrappingWidth="261.40673828125" />
+                                                            <Label layoutX="382.0" layoutY="315.0" text="Joachim du Bellay" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </TitledPane>
+                                            </panes>
+                                          </Accordion>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="tabXVII" onSelectionChanged="#selectNewCentury" text="XVIIe siècle">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Accordion fx:id="accordionXVII" prefHeight="408.0" prefWidth="504.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <panes>
+                                                <TitledPane fx:id="paneBaroque" animated="false" onMouseClicked="#openBaroque" onMousePressed="#clearLabel" text="Le Baroque">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button fx:id="buttLitBaroque" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                  <Button fx:id="buttMusBaroque" mnemonicParsing="false" onAction="#startBaroqueMusic" text="Musique" />
+                                                                  <Button fx:id="buttArtBaroque" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                               </children>
+                                                            </HBox>
+                                                            <ImageView fx:id="imageBaroque" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                            <Label layoutX="38.0" layoutY="26.0" text="LE BAROQUE" AnchorPane.topAnchor="25.0">
+                                                               <font>
+                                                                  <Font name="System Bold" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Text layoutX="38.0" layoutY="136.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les écrivains baroques sont fascinés par le changement et le mouvement. Les oeuvres exprime souvent l’illusion, la métamorphose, l’instabilité." wrappingWidth="225.0830078125">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="38.0" layoutY="295.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : Guerres de religion, révoltes des nobles (la fronde)" wrappingWidth="215.65625">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Label layoutX="380.0" layoutY="315.0" text="Johann Sebatian Bach" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </TitledPane>
+                                                <TitledPane fx:id="paneClassicisme" animated="false" onMouseClicked="#openClassicisme" onMousePressed="#clearLabel" text="Le Classicisme">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button fx:id="buttLitClassicisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                  <Button fx:id="buttMusClassicisme" mnemonicParsing="false" onAction="#startClassicismeMusic" text="Musique" />
+                                                                  <Button fx:id="buttArtClassicisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                               </children>
+                                                            </HBox>
+                                                            <ImageView fx:id="imageClassicisme" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                            <Label layoutX="38.0" layoutY="26.0" text="LE CLASSICIME" AnchorPane.topAnchor="25.0">
+                                                               <font>
+                                                                  <Font name="System Bold" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Text layoutX="38.0" layoutY="105.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ce mouvement littéraire et artistique suit des règles esthétiques et morales pour atteindre le style des oeuvres de la Grèce et Rome antique. " wrappingWidth="278.671875">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="37.0" layoutY="254.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : la Renaissance italienne, chute des byzantins, règne de Louis XIV, renforcement de la monarchie absolue et la contruction du palais de Versailles" wrappingWidth="281.65625">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Label layoutX="422.0" layoutY="313.0" text="Molière" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </TitledPane>
+                                            </panes>
+                                          </Accordion>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="tabXVIII" onSelectionChanged="#selectNewCentury" text="XVIIIe siècle">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Accordion fx:id="accordionXVIII" prefHeight="445.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <panes>
+                                                <TitledPane fx:id="paneLumieres" animated="false" onMouseClicked="#openLumieres" onMousePressed="#clearLabel" text="Les Lumières">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button fx:id="buttLitLumieres" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                  <Button fx:id="buttMusLumieres" mnemonicParsing="false" onAction="#startLumieresMusic" text="Musique" />
+                                                                  <Button fx:id="buttArtLumieres" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                               </children>
+                                                            </HBox>
+                                                            <ImageView fx:id="imageLumieres" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                            <Label layoutX="38.0" layoutY="26.0" text="LES LUMIÈRES" AnchorPane.topAnchor="25.0">
+                                                               <font>
+                                                                  <Font name="System Bold" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Text layoutX="38.0" layoutY="138.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Développé grâce à la révolution scientifique, le siècle des Lumières était une période de contestation contre l’injustice et l’ignorance. Grâce aux philosophes, le peuple a progressé vers la liberté et le savoir. La concentration était sur les avancements scientifiques au sein de la société." wrappingWidth="290.1826171875">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="38.0" layoutY="325.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : La Révolution française, la révolution scientifique, questionnement du pouvoir de la religion" wrappingWidth="261.40673828125" />
+                                                            <Label layoutX="425.0" layoutY="312.0" text="Diderot" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </TitledPane>
+                                            </panes>
+                                          </Accordion>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="tabXIX" onSelectionChanged="#selectNewCentury" text="XIXe siècle">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ScrollPane prefHeight="385.0" prefWidth="504.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="575.0" prefWidth="579.0">
+                                                   <children>
+                                                      <Accordion fx:id="accordionXIX" layoutX="77.0" layoutY="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <panes>
+                                                            <TitledPane fx:id="paneRomantisme" animated="false" onMouseClicked="#openRomanticism" onMousePressed="#clearLabel" text="Le Romantisme">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0" AnchorPane.rightAnchor="10.0">
+                                                                           <children>
+                                                                              <Button fx:id="buttLitRomantisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                              <Button fx:id="buttMusRomantisme" mnemonicParsing="false" onAction="#startRomantismeMusic" text="Musique" />
+                                                                              <Button fx:id="buttArtRomantisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <ImageView fx:id="imageRomantisme" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                                        <Label layoutX="38.0" layoutY="26.0" text="LE ROMANTISME" AnchorPane.topAnchor="25.0">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="24.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Text layoutX="38.0" layoutY="138.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le romantisme est un mouvement qui en concerne tous les arts. Il s’oppose au rationalisme et traditionalisme du classicisme et des lumières. L’imagination est libéré pour privilégier des thèmes d’amour, de la nature et de “moi”." wrappingWidth="223.03125">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="38.0" layoutY="314.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : 1e Empire de Napoléon, les révolutions de 1830 et 1848" wrappingWidth="222.2109375" />
+                                                                        <Label layoutX="438.0" layoutY="315.0" text="Victor Hugo" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                            <TitledPane fx:id="paneRealisme" animated="false" onMouseClicked="#openRealisme" onMousePressed="#clearLabel" text="Le Réalisme">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0" AnchorPane.rightAnchor="10.0">
+                                                                           <children>
+                                                                              <Button fx:id="buttLitRealisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                              <Button fx:id="buttMusRealisme" mnemonicParsing="false" onAction="#startRealismeMusic" text="Musique" />
+                                                                              <Button fx:id="buttArtRealisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <ImageView fx:id="imageRealisme" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                                        <Label layoutX="38.0" layoutY="26.0" text="LE RÉALISME" AnchorPane.topAnchor="25.0">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="24.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Text layoutX="38.0" layoutY="138.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En réaction au romantisme, le réalisme a pour mission d’exprimer la réalité aussi fidèlement que possible, sans idéalisation. Les oeuvres mettent en valeur les conditions sociales et économiques des individus, avec un impartialité de l’écrivain" wrappingWidth="225.98583984375">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="38.0" layoutY="327.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : La première révolution idustrielle, 2e Empire de Louis Napoléon" wrappingWidth="220.4091796875" />
+                                                                        <Label layoutX="393.0" layoutY="314.0" text="Honoré de Balzac" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                            <TitledPane fx:id="paneParnasse" animated="false" onMouseClicked="#openParnasse" onMousePressed="#clearLabel" text="La Parnasse">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0" AnchorPane.rightAnchor="10.0">
+                                                                           <children>
+                                                                              <Button fx:id="buttLitParnasse" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                              <Button fx:id="buttArtParnasse" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <ImageView fx:id="imageParnasse" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                                        <Label layoutX="38.0" layoutY="26.0" text="LA PARNASSE" AnchorPane.topAnchor="25.0">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="24.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Text layoutX="38.0" layoutY="138.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le mouvement littéraire du Parnasse était aussi considéré comme réaction au romantisme. Ça désigne principalement les poésies, et visait à communiquer les sciences de la nature, l’histoire et la philosophie à travers ce type d’oeuvre. Ainsi, ils dénoncent le pathétisme de l’humanité et l’émotion dans leurs ensembles." wrappingWidth="225.98583984375">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="40.0" layoutY="375.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : Réaction contre le romantisme" wrappingWidth="220.4091796875" />
+                                                                        <Label layoutX="393.0" layoutY="314.0" text="Leconte de Lisle" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                            <TitledPane fx:id="paneNaturalisme" animated="false" onMouseClicked="#openNaturalisme" onMousePressed="#clearLabel" text="Le Naturalisme">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0" AnchorPane.rightAnchor="10.0">
+                                                                           <children>
+                                                                              <Button fx:id="buttLitNaturalisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                              <Button fx:id="buttMusNaturalisme" mnemonicParsing="false" onAction="#startNaturalismeMusic" text="Musique" />
+                                                                              <Button fx:id="buttArtNaturalisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <ImageView fx:id="imageNaturalisme" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                                        <Label layoutX="38.0" layoutY="26.0" text="LE NATURALISME" AnchorPane.topAnchor="25.0">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="24.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Text layoutX="38.0" layoutY="117.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ceci est un approfondissement du réalisme qui introduit les sciences humaines et sociales à la littérature." wrappingWidth="230.29931640625">
+                                                                           <font>
+                                                                              <Font size="16.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="38.0" layoutY="252.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : 2e Empire de Louis Napoléon, 3e République, le Capitalisme" wrappingWidth="281.65625">
+                                                                           <font>
+                                                                              <Font size="16.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Label layoutX="378.0" layoutY="317.0" text="Guy de Maupassant" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                            <TitledPane fx:id="paneSymbolisme" animated="false" onMouseClicked="#openSymbolicisme" onMousePressed="#clearLabel" text="Le Symbolisme">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0" AnchorPane.rightAnchor="10.0">
+                                                                           <children>
+                                                                              <Button fx:id="buttLitSymbolisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                              <Button fx:id="buttMusSymbolisme" mnemonicParsing="false" onAction="#startSymbolismeMusic" text="Musique" />
+                                                                              <Button fx:id="buttArtSymbolisme" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                        <ImageView fx:id="imageSymbolisme" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                                        <Label layoutX="38.0" layoutY="26.0" text="LE SYMBOLISME" AnchorPane.topAnchor="25.0">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="24.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Text layoutX="38.0" layoutY="119.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Certaines poètes ont révolté contre les conventions, structures, et techniques rigides de la poésie français. Ainsi, le mouvement symboliste est né, donnant les auteurs une liberté d’expression. Les symboles et figures de style était souvent employé afin de de communiqué la mystériosité de l’existence humain. " wrappingWidth="234.56982421875">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="38.0" layoutY="336.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : 2e Empire de Louis Napoléon et 3e République" wrappingWidth="261.40673828125" />
+                                                                        <Label layoutX="400.0" layoutY="315.0" text="Paul Verlaine" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                         </panes>
+                                                      </Accordion>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="tabXX" onSelectionChanged="#selectNewCentury" text="XXe siècle">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Accordion fx:id="accordionXX" prefHeight="445.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <panes>
+                                                <TitledPane fx:id="paneAbsurde" animated="false" onMouseClicked="#openAbsurde" onMousePressed="#clearLabel" text="L'Absurde">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button fx:id="buttLitAbsurde" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                  <Button fx:id="buttMusAbsurde" mnemonicParsing="false" onAction="#startAbsurdeMusic" text="Musique" />
+                                                                  <Button fx:id="buttArtAbsurde" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                               </children>
+                                                            </HBox>
+                                                            <ImageView fx:id="imageAbsurde" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                            <Label layoutX="38.0" layoutY="26.0" text="L'ABSURDE" AnchorPane.topAnchor="25.0">
+                                                               <font>
+                                                                  <Font name="System Bold" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Text layoutX="38.0" layoutY="136.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le roman et le théâtre de l’absurde illustre l’étrangeté de la vie humaine et la condition humaine. Ceci se base sur la philosophie que l’existence paraît injustifiée." wrappingWidth="233.95947265625">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="38.0" layoutY="303.0" lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contexte Historique : Les deux guerres mondiales, le 4e République, le 5e République" wrappingWidth="248.078125">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Label layoutX="391.0" layoutY="314.0" text="Eugène Ionesco" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </TitledPane>
+                                                <TitledPane fx:id="paneNewRoman" animated="false" onMouseClicked="#openNewRoman" onMousePressed="#clearLabel" text="Le Nouveau Roman">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="328.0" layoutY="344.0" prefHeight="32.0" prefWidth="254.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button fx:id="buttLitNewRoman" mnemonicParsing="false" onAction="#handleOpenPopup" text="Littérature" />
+                                                                  <Button fx:id="buttArtNewRoman" mnemonicParsing="false" onAction="#handleOpenPopup" text="Art Visuel" />
+                                                               </children>
+                                                            </HBox>
+                                                            <ImageView fx:id="imageNewRoman" fitHeight="238.0" fitWidth="206.0" layoutX="352.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                                                            <Label layoutX="38.0" layoutY="26.0" text="LE NOUVEAU ROMAN" AnchorPane.topAnchor="25.0">
+                                                               <font>
+                                                                  <Font name="System Bold" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Text layoutX="38.0" layoutY="114.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le but de ce mouvement était de remettre en cause la valeur du roman traditionnel, avec la réjection de l’héroïsme, la vraisemblance, et l’écriture avec un auteur omniscient. C’est souvent désigné comme étant un refus: d’intrigue traditionnelle, types psychologiques, et analyse des sentiments." wrappingWidth="260.8876953125">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="38.0" layoutY="315.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Context Historique : Période de doute sure la nature des êtres humains, Poste traumatisme du deuxième guerre mondiale " wrappingWidth="273.4970703125" />
+                                                            <Label layoutX="402.0" layoutY="316.0" text="Nathalie Sarraute" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </TitledPane>
+                                             </panes>
+                                          </Accordion>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="267.0" prefWidth="603.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" layoutX="34.0" layoutY="69.0" prefHeight="100.0" prefWidth="535.0">
+                           <children>
+                              <Rectangle fx:id="boxXVI" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="87.0" onMouseClicked="#showXVI" stroke="#888888" strokeType="INSIDE" width="100.0" />
+                              <Rectangle fx:id="boxXVII" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="87.0" onMouseClicked="#showXVII" stroke="#888888" strokeType="INSIDE" width="100.0" />
+                              <Rectangle fx:id="boxXVIII" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="87.0" onMouseClicked="#showXVIII" stroke="#888888" strokeType="INSIDE" width="100.0" />
+                              <Rectangle fx:id="boxXIX" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="87.0" onMouseClicked="#showXIX" stroke="#888888" strokeType="INSIDE" width="100.0" />
+                              <Rectangle fx:id="boxXX" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="87.0" onMouseClicked="#showXX" stroke="#888888" strokeType="INSIDE" width="100.0" />
+                           </children>
+                        </HBox>
+                        <Label layoutX="208.0" layoutY="21.0" text="Frise Chronologique Intéractif" />
+                        <Label layoutX="34.0" layoutY="48.0" text="1500" />
+                        <Label layoutX="138.0" layoutY="48.0" text="1600" />
+                        <Label layoutX="235.0" layoutY="48.0" text="1700" />
+                        <Label layoutX="337.0" layoutY="48.0" text="1800" />
+                        <Label layoutX="433.0" layoutY="48.0" text="1900" />
+                        <Label layoutX="534.0" layoutY="48.0" text="2000" />
+                        <Label layoutX="86.0" layoutY="48.0" text="1550" />
+                        <Label layoutX="183.0" layoutY="48.0" text="1650" />
+                        <Label layoutX="286.0" layoutY="48.0" text="1750" />
+                        <Label layoutX="387.0" layoutY="48.0" text="1850" />
+                        <Label layoutX="485.0" layoutY="48.0" text="1950" />
+                        <Label fx:id="labelBaroque" layoutX="158.0" layoutY="92.0" onMouseClicked="#openBaroque" onMousePressed="#clearLabel" text="Baroque" />
+                        <Label fx:id="labelClassicisme" layoutX="198.0" layoutY="110.0" onMouseClicked="#openClassicisme" onMousePressed="#clearLabel" text="Classicisme" />
+                        <Label fx:id="labelHumanisme" layoutX="13.0" layoutY="110.0" onMouseClicked="#openHumanisme" onMousePressed="#clearLabel" text="Humanisme" />
+                        <Label fx:id="labelPleiade" layoutX="93.0" layoutY="92.0" onMouseClicked="#openPleiade" onMousePressed="#clearLabel" text="Pléiade" />
+                        <Label fx:id="labelLumieres" layoutX="258.0" layoutY="92.0" onMouseClicked="#openLumieres" onMousePressed="#clearLabel" text="Les Lumières" />
+                        <Label fx:id="labelRomantisme" layoutX="354.0" layoutY="71.0" onMouseClicked="#openRomanticism" onMousePressed="#clearLabel" text="Romatisme" />
+                        <Label fx:id="labelRealisme" layoutX="396.0" layoutY="86.0" onMouseClicked="#openRealisme" onMousePressed="#clearLabel" prefHeight="16.0" prefWidth="56.0" text="Réalisme" />
+                        <Label fx:id="labelNaturalisme" layoutX="381.0" layoutY="120.0" onMouseClicked="#openNaturalisme" onMousePressed="#clearLabel" text="Naturalisme" />
+                        <Label fx:id="labelSymbolisme" layoutX="389.0" layoutY="136.0" onMouseClicked="#openSymbolicisme" onMousePressed="#clearLabel" text="Symbolisme" />
+                        <Label fx:id="labelAbsurde" layoutX="474.0" layoutY="94.0" onMouseClicked="#openAbsurde" onMousePressed="#clearLabel" text="Absurde" />
+                        <Label fx:id="labelNewRoman" layoutX="483.0" layoutY="111.0" onMouseClicked="#openNewRoman" onMousePressed="#clearLabel" text="Nouveau Roman" />
+                        <Label fx:id="labelParnasse" layoutX="399.0" layoutY="103.0" onMouseClicked="#openParnasse" onMousePressed="#clearLabel" text="Parnasse" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DateUtil.java&apos; to &apos;PatientList/src/adress.util&apos;&#x0A;- Original project: &apos;JavaClub&apos;&#x0A;- Destination element: &apos;PatientList/src/adress.util&apos;&#x0A;- Original element: &apos;adress.util.DateUtil.java&apos;" description="Copy compilation unit" destination="=PatientList/src&lt;adress.util" element1="/src&lt;adress.util{DateUtil.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1518028518561" units="1" version="1.0"/>
+</session>

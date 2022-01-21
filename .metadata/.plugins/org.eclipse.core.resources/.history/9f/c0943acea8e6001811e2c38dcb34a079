@@ -1,0 +1,57 @@
+package application;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import application.DatabaseUtilities;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+public class OrdersFunctions {
+	
+	public static void checkUsernamePassword(boolean customer, String username, String password)
+	{
+		if(customer)
+		{
+			
+		}
+		else if(customer==false)
+		{
+			
+		}
+	}
+	
+	public static ObservableList<User> getAllUsers() throws ClassNotFoundException, SQLException
+	{
+		String sql="select * from login_password";
+		try {
+			ResultSet rsSet=DatabaseUtilities.dbExecute(sql);
+			ObservableList<User> UserList=getUserObjects(rsSet);
+			return UserList;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
+	
+	public static ObservableList<User> getUserObjects(ResultSet rsSet) throws ClassNotFoundException, SQLException
+	{
+		try {
+			ObservableList<User> UserList =FXCollections.observableArrayList();
+			while(rsSet.next())
+			{
+				User user=new User(rsSet.getString("UserName"),rsSet.getString("PassWord"));
+				user.setCustomerId(rsSet.getInt("customer_id"));
+				user.setEmployeeId(rsSet.getInt("employee_id"));
+				user.setId(rsSet.getInt("ID"));
+				UserList.add(user);
+			}
+			return UserList;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		}
+		
+	}
+
+}

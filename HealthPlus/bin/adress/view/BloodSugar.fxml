@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adress.view.BloodSugarWindowController">
+   <children>
+      <Label layoutX="148.0" layoutY="14.0" text="Blood Sugar Level">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="29.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Sugar levels are an important indicator of health. Blood Sugar is mesured in mole over litre (mmol/L) where the normal range while fasting is 3.9 to 5.5 mmol/L and up to 6.6 mmol/L when eating. An unhealthy concentration is anything above 6.9 mmol/L. Elevated blood sugar levels indicate diabetes, caused either genetically for type one and by an excess in sugar in the diet for type two. Enter your blood sugar concentration below in after fasting to find out if your levels are healthy." wrappingWidth="468.21875" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="30.0" />
+      <RadioButton fx:id="rb1" layoutX="29.0" layoutY="187.0" mnemonicParsing="false" selected="true" text="mmol/L">
+         <toggleGroup>
+            <ToggleGroup fx:id="Type" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb2" layoutX="29.0" layoutY="216.0" mnemonicParsing="false" text="mg/DL" toggleGroup="$Type" />
+      <TextField fx:id="field" layoutX="175.0" layoutY="203.0" prefHeight="27.0" prefWidth="255.0" />
+      <Button layoutX="251.0" layoutY="251.0" mnemonicParsing="false" onAction="#radioSelect" text="Enter" />
+      <Button layoutX="198.0" layoutY="251.0" mnemonicParsing="false" onAction="#goBack" text="Close" />
+   </children>
+</AnchorPane>

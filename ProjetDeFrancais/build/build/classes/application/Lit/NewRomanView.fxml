@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PopupWindowController">
+   <children>
+      <Label layoutX="78.0" layoutY="40.0" text="Nouveau Roman : Littérature" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="77.0" text="Ère de soupçon de Sarraute" AnchorPane.topAnchor="77.0" />
+      <Button layoutX="169.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" AnchorPane.bottomAnchor="33.0" />
+      <Text layoutX="40.0" layoutY="116.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ce que révèle, en effet, cette évolution actuelle du personnage de roman est tout à l'opposé d'une régression à un stade infantile. Elle témoigne, à la fois chez l'auteur et chez le lecteur, d'un état d'esprit singulièrement sophistiqué. Non seulement ils se méfient du personnage de roman, mais, à travers lui, ils se méfient l'un de l'autre. Il était le terrain d'entente, la base solide d'où ils pouvaient d'un commun effort s'élancer vers des recherches et des découvertes nouvelles. Il est devenu le lieu de leur méfiance réciproque, le terrain dévasté où ils s'affrontent. Quand on examine sa situations actuelle, on est tenté de se dire qu'elle illustre à merveille le mot de Stendhal : « le génie du soupçon est venu au monde ». Nous sommes entrés dans l'ère du soupçon." wrappingWidth="320.9306640625" />
+   </children>
+</AnchorPane>

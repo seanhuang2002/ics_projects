@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="500.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WindowController">
+   <center>
+      <TabPane prefHeight="471.0" prefWidth="243.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+            <Tab text="Home">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+          <Tab text="Students">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <TableView fx:id="studentTableView" prefHeight="438.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="nameStudentCol" prefWidth="84.0" text="Name" />
+                            <TableColumn fx:id="lastNameStudentCol" prefWidth="94.0" text="Surname" />
+                              <TableColumn fx:id="gradeStudentCol" prefWidth="64.0" text="Grade" />
+                          </columns>
+                        </TableView>
+                     </left>
+                     <center>
+                        <Accordion fx:id="studentPane" BorderPane.alignment="CENTER">
+                          <panes>
+                            <TitledPane fx:id="personalInfoStudent" animated="false" text="Personal Information">
+                                 <content>
+                                    <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab text="Student Information">
+                                             <content>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <right>
+                                                      <TableView prefHeight="269.0" prefWidth="175.0" BorderPane.alignment="CENTER">
+                                                        <columns>
+                                                          <TableColumn prefWidth="175.0" text="Classes" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </right>
+                                                   <center>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <bottom>
+                                                            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="380.0" spacing="25.0" BorderPane.alignment="CENTER">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#handleNewMember" text="Add Student" />
+                                                                  <Button mnemonicParsing="false" onAction="#editStudent" text="Edit Details" />
+                                                                  <Button mnemonicParsing="false" text="Delete Student" />
+                                                               </children>
+                                                            </HBox>
+                                                         </bottom>
+                                                         <center>
+                                                            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <children>
+                                                                  <GridPane layoutX="49.0" layoutY="87.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label text="Name:" />
+                                                                        <Label text="Surname:" GridPane.rowIndex="1" />
+                                                                        <Label text="Address:" GridPane.rowIndex="2" />
+                                                                        <Label text="City:" GridPane.rowIndex="3" />
+                                                                        <Label text="Postal Code" GridPane.rowIndex="4" />
+                                                                        <Label text="Email:" GridPane.rowIndex="5" />
+                                                                        <Label text="Telephone:" GridPane.rowIndex="6" />
+                                                                        <Label text="Date of birth:" GridPane.rowIndex="7" />
+                                                                        <Label text="Grade/Level:" GridPane.rowIndex="8" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </center>
+                                                      </BorderPane>
+                                                   </center>
+                                                </BorderPane>
+                                             </content>
+                                        </Tab>
+                                        <Tab text="Parental Information">
+                                             <content>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <items>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <VBox alignment="TOP_CENTER" prefHeight="280.0" prefWidth="262.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <GridPane prefHeight="232.0" prefWidth="260.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                                                <columnConstraints>
+                                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                </columnConstraints>
+                                                                                <rowConstraints>
+                                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                </rowConstraints>
+                                                                                 <children>
+                                                                                    <Label text="Name:" />
+                                                                                    <Label text="Surname:" GridPane.rowIndex="1" />
+                                                                                    <Label text="Address:" GridPane.rowIndex="2" />
+                                                                                    <Label text="City:" GridPane.rowIndex="3" />
+                                                                                    <Label text="Postal Code:" GridPane.rowIndex="4" />
+                                                                                    <Label text="Email:" GridPane.rowIndex="5" />
+                                                                                    <Label text="Telephone:" GridPane.rowIndex="6" />
+                                                                                    <Label text="Occupation:" GridPane.rowIndex="7" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                                 </children>
+                                                                              </GridPane>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                                           <children>
+                                                                              <Button mnemonicParsing="false" text="Add" />
+                                                                              <Button mnemonicParsing="false" text="Edit" />
+                                                                              <Button mnemonicParsing="false" text="Delete" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                            </AnchorPane>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <VBox alignment="TOP_CENTER" prefHeight="280.0" prefWidth="263.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <GridPane prefHeight="232.0" prefWidth="260.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                                                 <children>
+                                                                                    <Label text="Name:" />
+                                                                                    <Label text="Surname:" GridPane.rowIndex="1" />
+                                                                                    <Label text="Address:" GridPane.rowIndex="2" />
+                                                                                    <Label text="City:" GridPane.rowIndex="3" />
+                                                                                    <Label text="Postal Code:" GridPane.rowIndex="4" />
+                                                                                    <Label text="Email:" GridPane.rowIndex="5" />
+                                                                                    <Label text="Telephone:" GridPane.rowIndex="6" />
+                                                                                    <Label text="Occupation:" GridPane.rowIndex="7" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                                 </children>
+                                                                                 <columnConstraints>
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                 </columnConstraints>
+                                                                                 <rowConstraints>
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                 </rowConstraints>
+                                                                              </GridPane>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                                           <children>
+                                                                              <Button mnemonicParsing="false" text="Add" />
+                                                                              <Button mnemonicParsing="false" text="Edit" />
+                                                                              <Button mnemonicParsing="false" text="Delete" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </items>
+                                                      </SplitPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Class Schedule">
+                                 <content>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <right>
+                                          <TableView prefHeight="309.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+                                            <columns>
+                                              <TableColumn prefWidth="90.0" text="Class">
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="Name" />
+                                                      <TableColumn prefWidth="75.0" text="Code" />
+                                                   </columns>
+                                                </TableColumn>
+                                              <TableColumn prefWidth="100.0" text="Teacher" />
+                                                <TableColumn prefWidth="100.0" text="Room" />
+                                            </columns>
+                                          </TableView>
+                                       </right>
+                                       <center>
+                                          <AnchorPane prefHeight="309.0" prefWidth="223.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox alignment="CENTER" layoutX="31.0" layoutY="168.0" prefHeight="118.0" prefWidth="124.0" spacing="20.0">
+                                                   <children>
+                                                      <ComboBox prefWidth="150.0" promptText="Choose Day" />
+                                                      <Button mnemonicParsing="false" text="Edit Schedule" />
+                                                      <Button mnemonicParsing="false" text="Full Schedule" />
+                                                   </children>
+                                                </VBox>
+                                                <Label layoutX="30.0" layoutY="14.0" text="Daily Schedule">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Text layoutX="32.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The schedule to the right show a single day. Choose the day below or show full schedule." wrappingWidth="121.501953125" />
+                                             </children>
+                                          </AnchorPane>
+                                       </center>
+                                    </BorderPane>
+                                 </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Marks">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <BorderPane layoutX="45.0" layoutY="32.0" prefHeight="329.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <center>
+                                                <TableView prefHeight="300.0" prefWidth="535.0" BorderPane.alignment="CENTER">
+                                                  <columns>
+                                                    <TableColumn prefWidth="89.17" text="Subject" />
+                                                    <TableColumn prefWidth="89.16" text="Criterion A" />
+                                                      <TableColumn prefWidth="89.16" text="Criterion B" />
+                                                      <TableColumn prefWidth="89.16" text="Criterion C" />
+                                                      <TableColumn prefWidth="89.16" text="Criterion D" />
+                                                      <TableColumn prefWidth="84.0" text="Average" />
+                                                  </columns>
+                                                </TableView>
+                                             </center>
+                                             <bottom>
+                                                <HBox alignment="CENTER" prefHeight="53.0" prefWidth="535.0" spacing="50.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" text="Add Mark" />
+                                                      <Button mnemonicParsing="false" text="Edit Mark" />
+                                                      <Button mnemonicParsing="false" text="Delete Mark" />
+                                                   </children>
+                                                </HBox>
+                                             </bottom>
+                                          </BorderPane>
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                              <TitledPane animated="false" text="Borrowed Materials">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                </content>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab text="Teachers">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <TableView fx:id="teacherTableView" prefHeight="438.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="nameTeacherCol" prefWidth="113.0" text="Name" />
+                            <TableColumn fx:id="lastNameTeacherCol" prefWidth="133.0" text="Surname" />
+                          </columns>
+                        </TableView>
+                     </left>
+                     <center>
+                        <Accordion BorderPane.alignment="CENTER">
+                          <panes>
+                            <TitledPane animated="false" text="Personal Information">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Class Schedule">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                              <TitledPane animated="false" text="Borrowed Materials">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                </content>
+                              </TitledPane>
+                            <TitledPane animated="false" text="Student Marks">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab text="Staff">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <TableView fx:id="staffTableView" prefHeight="438.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="nameStaffCol" prefWidth="113.0" text="Name" />
+                            <TableColumn fx:id="lastNameStaffCol" prefWidth="133.0" text="Surname" />
+                          </columns>
+                        </TableView>
+                     </left>
+                     <center>
+                        <Accordion BorderPane.alignment="CENTER">
+                          <panes>
+                            <TitledPane animated="false" text="Personal Information">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Job Information">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

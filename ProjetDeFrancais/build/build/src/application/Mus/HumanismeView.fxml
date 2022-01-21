@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HumanismeWindowController">
+   <children>
+      <SplitPane dividerPositions="0.6510067114093959" layoutY="213.0" orientation="VERTICAL" prefHeight="413.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <Text layoutX="120.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Absurde : Musique">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="74.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Missa l'Homme Armé&quot; de Dufay (1450)" />
+                  <Button layoutX="169.0" layoutY="143.0" mnemonicParsing="false" onAction="#handleQuit" text="Fermer" />                  <MediaView fx:id="mv" fitHeight="50.0" fitWidth="50.0" layoutX="22.0" layoutY="17.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="84.0" layoutY="38.0" prefHeight="48.0" prefWidth="231.0" spacing="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handlePlay" text="Jouer" />
+                        <Button mnemonicParsing="false" onAction="#handlePause" text="Pause" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="169.0" layoutY="14.0" text="Contrôles" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

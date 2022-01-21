@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.PopupWindowController">
+   <children>
+      <Label layoutX="112.0" layoutY="39.0" text="Baroque : Littérature" AnchorPane.topAnchor="39.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="78.0" text="Les Tragiques (1616) d'Aubigné" AnchorPane.topAnchor="78.0" />
+      <VBox layoutX="44.0" layoutY="128.0" prefHeight="204.0" prefWidth="313.0" spacing="2.0">
+         <children>
+            <Label text="Je veux peindre la France une mere affligee," />
+            <Label text="Qui est entre ses bras de deux enfans chargee." />
+            <Label text="Le plus fort, orgueilleux, empoigne les deux bouts" />
+            <Label text="Des tetins nourriciers, puis à force de coups," />
+            <Label text="D’ongles, de poings, de pieds il brise le partage" />
+            <Label text="Dont nature donnoit à son besson l’usage ;" />
+            <Label text="Ce volleur acharné, cet Esau malheureux" />
+            <Label text="Faict degast du doux laict qui doit nourrir les deux," />
+            <Label text="Si que, pour arracher à son frère la vie," />
+            <Label text="Il mesprise la sienne et n’en a plus d’envie." />
+            <Label text="Mais son Jacob, pressé d’avoir jeusné meshui," />
+            <Label text="Ayant dompté longtemps en son coeur son ennui," />
+         </children>
+      </VBox>
+      <Button layoutX="169.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" AnchorPane.bottomAnchor="33.0" />
+   </children>
+</AnchorPane>

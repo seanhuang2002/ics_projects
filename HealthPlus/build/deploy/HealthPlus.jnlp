@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="HealthPlus.jnlp">
+  <information>
+    <title>HealthPlus</title>
+    <vendor>SHuang</vendor>
+    <description>HealthPlus</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="HealthPlus.jar" size="54008" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="adress.Main"  name="HealthPlus" />
+  <update check="background"/>
+</jnlp>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adress.view.EntryWindowController">
+   <children>
+      <TabPane layoutX="1.0" prefHeight="643.0" prefWidth="333.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Home">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <ListView fx:id="list" prefHeight="467.0" prefWidth="220.0" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <Accordion fx:id="accord" BorderPane.alignment="CENTER">
+                          <panes>
+                            <TitledPane animated="false" text="Strategies to Improve Wellness">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                       <children>
+                                          <TabPane prefHeight="385.0" prefWidth="529.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab text="Relaxation">
+                                                   <content>
+                                                      <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="349.0" prefWidth="517.0">
+                                                               <children>
+                                                                  <Text layoutX="42.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Improving Wellness: Relaxation" AnchorPane.leftAnchor="42.0">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text layoutX="42.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To be able to relax is very important to maintaining a good mental health and wellness. Relaxing helps ease off stress, making you look, and feel, much younger. It can also be a time to destress from the annals of modern urban life, to take some time to put away the computer or phone and just relax." wrappingWidth="442.00927734375" />
+                                                                  <Text layoutX="42.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ways to Relax: ">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text layoutX="42.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There are many ways to relax. Simply putting away your electronical devices for a certain period of time is enought. Reading a book or writing a journal are also ways to relax everyday. Getting spa treatments, like a facial, can also induce relaxation. Other things, like cupping therapy, aromatherapy or acupucture also have relaxational effects." wrappingWidth="194.498046875" />
+                                                                  <ImageView fx:id="relaxImageView" fitHeight="150.0" fitWidth="200.0" layoutX="263.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                      </ScrollPane>
+                                                   </content>
+                                              </Tab>
+                                              <Tab text="Sleep">
+                                                   <content>
+                                                      <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="352.0" prefWidth="527.0">
+                                                               <children>
+                                                                  <Text layoutX="39.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Improving Wellness: Sleep" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="13.59765625">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text layoutX="42.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What many people might not know is that sleep is a very large contributing factor to one's personal wellness. It is during our sleep cycle that our bodies rest and recuperate after a long, stressful day. As such, changing the way you sleep and your sleep schedule can have a knock on effect, vastly improving your wellness and levels of relaxation. " wrappingWidth="457.33544921875" />
+                                                                  <Text layoutX="42.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ways to Improve Your Sleep: ">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text layoutX="42.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There are many ways to modify your sleep schedule to improve your overall health. Sleeping at least eight hours definitely helps. Avoiding blue light producing electronics, like computers, televisions and smartphones before going to bed. Sleeping nude. Getting a comfortable, and supportive mattress and pillow. These are all ways to improve your wellness by simply changing a few parametres of your nightly siesta.  " wrappingWidth="243.4697265625" />
+                                                                  <ImageView fx:id="sleepImageView" fitHeight="150.0" fitWidth="200.0" layoutX="299.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </children></AnchorPane>
+                                                        </content>
+                                                      </ScrollPane>
+                                                   </content>
+                                              </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Strategies to Improve Physical Health">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TabPane prefHeight="385.0" prefWidth="529.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab text="Cardio (Aerobic)">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ScrollPane layoutX="72.0" layoutY="97.0" prefHeight="352.0" prefWidth="529.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <AnchorPane prefHeight="518.0" prefWidth="507.0">
+                                                                     <children>
+                                                                        <Text layoutX="42.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to Improve Cardiac Health : Aerobic Exercise" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="13.59765625">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="42.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cardiac health is very important, the heart is, after all, what keeps the blood pumping. Poor cardiac health, as a result of diseases like obesity, can lead to other serious health problems, like heart attacks or even cardiac arrest. As such, improving the heart's capabilities is essential to gain and maintain good health. Exercises that help to build the heart muscle's strength are called aerobic. Aerobic exercise is low-medium in intensity and there is the requirement of free oxygen." wrappingWidth="421.21875" AnchorPane.leftAnchor="42.0" />
+                                                                        <Text layoutX="42.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There are many aerobic, or cardio, exercises. Some good cardio exercises include running/jogging, long distance swimming, cycling, rowing, skiing, kickboxing, jump roping and jumping jacks. All of these exercises strengthen the heart muscle and the respiratory muscles, which are very important for good health" wrappingWidth="191.0" />
+                                                                        <Text layoutX="42.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Types:">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <ImageView fx:id="cardioImageView" fitHeight="163.0" fitWidth="220.0" layoutX="253.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                                        <Text layoutX="42.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frequency:">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="41.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aerobic exercise should be a part of anyone's workout. The American Collego of Sports Medicine recomends five sessions of moderate cardio for 30 minustes each week or three sessions of intense cardio for 3o minutes each week so as to gain and maintain good health." wrappingWidth="425.22314453125" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children></AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab text="Strength (Anerobic)">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ScrollPane layoutX="-3.0" layoutY="-2.0" prefHeight="354.0" prefWidth="533.0">
+                                                              <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="520.0" prefWidth="512.0">
+                                                                     <children>
+                                                                        <Text layoutX="35.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to Improve Physical Health: Anaerobic Exercise" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="13.59765625">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="41.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The other type of exercise, other than aerobic, or cardio exercises, are anaerobic, or strength exercises. Anaerobic exercises are physical exercises, usually in short burst of intensity, that cause lactate to form. They, in addition to fortifying the heart muscle, build muscle strength. For an execise to be anaerobic, no oxygen should be needed, meaning that any exercise with a duration of longer than two minutes is considered aerobic. Anaerobic exercise is very important to maintaining good health, and should be a part of every workout. " wrappingWidth="443.2705078125" />
+                                                                        <Text layoutX="42.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Types:">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="42.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There are many types of anaerobic exercises. These include sprint running, sprint swimming, lifting weights, discus, powerlifting and bodybuilding. In other cases, strength training can be a part of other sports like football, soccer, tennis, hockey, wrestling, basketball and track and field. All of these provide an excellent strength workout." wrappingWidth="190.80322265625" />
+                                                                        <ImageView fx:id="strengthImageView" fitHeight="177.0" fitWidth="216.0" layoutX="263.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" />
+                                                                        <Text layoutX="41.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Why and how?">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="41.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength training is an essential part, along with cardio, for a good workout. A general rule is that you should be doing more cardio than strength training, say four sessions of cardio to two sessions of strength training each week. The health benefits of strength training are stronger muscles and more endurance for cardio." wrappingWidth="443.17529296875" />
+                                                                     </children></AnchorPane>
+                                                              </content>
+                                                            </ScrollPane>
+                                                         </children></AnchorPane>
+                                                </content>
+                                              </Tab>
+                                                <Tab text="Diet">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ScrollPane prefHeight="355.0" prefWidth="530.0">
+                                                               <content>
+                                                                  <AnchorPane prefHeight="934.0" prefWidth="511.0">
+                                                                     <children>
+                                                                        <Text layoutX="42.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to Improve Physical Health: Diet" AnchorPane.leftAnchor="42.0">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="42.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diet is, without a doubt, the most important part of maintaining health. You could work out for five hours every day, but without healthy eating, you would still be unhealthy. Fast food and processed foods should be avoided. There should be more greens and legumes. Lean meats, like turkey, chicken or fish, should be substituted for unhealthy red meats like beef and pork. One should drink less pop and more water. You should avoid carbohydrates and sugary foods. Finally, the hullmark of a sucessful diet is calorie counting, so as to maintain a healthy amount of energy (2500 calories for men and 2000 for women.)" wrappingWidth="453.3232421875" />
+                                                                        <Text layoutX="42.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atkins Diet:">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="42.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The goal of the Atkins diet is to control levels of insulin in the body via reduced amounts of carbohydrates. This diet is an option for the diabetic. Carbohydrates consumed in large amounts trigger the rapid rise and fall of insulin. Elevated insulin levels tell the body to store energy as fat. Therefore, the Atkins diet decrees that one must not eat to many carbodyhrates, instead eating more protein and fat. This diet is controversial and you should seek a recommendation from your doctor." wrappingWidth="149.60791015625" />
+                                                                        <ImageView fx:id="dietImageView" fitHeight="150.0" fitWidth="200.0" layoutX="256.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
+                                                                        <Text layoutX="228.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vegetarian/Vegan Diet:">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="228.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The vegetarian diet seeks to eliminate all meat products from the diet. Vegans go a step further by fully eliminating any animal product from their diet. These diets have been shown to decrease the fat and health problems gained when eating red meats. People adopt these diets mostly for ethical reasons concerning animal rights and abuse. There is a risk of excess carbohydrates from all the leafy greens in the diet. " wrappingWidth="268.06689453125" />
+                                                                        <Text layoutX="52.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flaxitarian Diet:" AnchorPane.leftAnchor="42.0">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="40.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The flaxitarian diet is very similar to the vegetarian diet, the only difference being the occasional consumption of meats. This can be very beneficial due to the balance between the needed food groups and the flexible nature of the diet, not restricted to legunes, vegetables, grains and fruit." wrappingWidth="454.5240020751953" AnchorPane.leftAnchor="42.0" />
+                                                                        <Text layoutX="55.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ketogenic Diet:" AnchorPane.leftAnchor="42.0">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="40.0" layoutY="704.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The ketogenic diet is a diet that focuses on putting the body in a state known as ketosis. In this state, the body resorts to burning fats for fuel, instead of carbohydrates, which would be converted into glucose and contributing to diabetes. This diet replaces most carbohydrates with healthy fats. It works only if the amount of carbohydrates in the diet is miniscule, causing the liver to convert fats into fatty acids and ketones, putting the body into ketosis. This diet should only be done with approval from a doctor. " wrappingWidth="429.072998046875" AnchorPane.leftAnchor="40.0" />
+                                                                        <Text layoutX="53.0" layoutY="833.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mediterranean diet:" AnchorPane.leftAnchor="42.0">
+                                                                           <font>
+                                                                              <Font size="15.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text layoutX="105.0" layoutY="854.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Mediterranean diet is a diet that mimic the eating patterns of Southern Europeans, particularily the Greek and Italian diet. The emphasis is placed on plants, fruits, seeds and olive oil. There are also eggs, poultry and fish. Research has shown that this diet has immense health benefits and that the olive oil consumed is very healthy. " wrappingWidth="462.51385498046875" AnchorPane.leftAnchor="42.0" />
+                                                                     </children></AnchorPane>
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children></AnchorPane>
+                                                  </content>
+                                                </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane fx:id="Welcome" animated="false" text="Welcome">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="129.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Health Plus">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Text layoutX="40.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Health Plus. This app was created with one's personal health and wellbeing in mind. Our focus is to better the physical and mental health of a person. Included in this app are many strategies to improve health, like those included in the drop down menus above, or linked to external websites on the left. There is also a tab in which the definitions of several indicators of health status are defined and where your results and statuses, according to the respective indices can be found. Finally, there is an included record book to record your journey to health and wellbeing where your statistics can be recorded and viewed, along with charts showing your evolution. " wrappingWidth="447.11572265625">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font></Text>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab text="Definitions and Calculations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="calcucombobox" layoutX="219.0" layoutY="384.0" onAction="#comboBoxChanged" prefHeight="27.0" prefWidth="312.0" promptText="Choose" />
+                        <Label layoutX="218.0" layoutY="50.0" text="Definitions and Calculations">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="98.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There are many important indicators of good health that exist. Each and every one of the indicators is important to the maintenance of good health. Some of those health indicators and listed below in the drop down menu. Selecting one will bring up a seperate window wherein you will find an easy definition and a calculator to calculate your own status according to the indicator. Many of these indices will be required to record an entry in the record tab to monitor your health so be sure to note them down after calculation." wrappingWidth="555.7158203125" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Records">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="350.0" layoutY="368.0" mnemonicParsing="false" onAction="#starttable" text="Open" />
+                        <Label layoutX="303.0" layoutY="43.0" text="Record Book">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="102.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It is important to track your progress when on a journey to good health. A record book, recording the indices defined in the &quot;Definitions and Calculations' tab of this program is provided. It will display the aforementioned indices and statistics charts showing the evolution of several pertinent indices. Note that the files are not automatically save, you must save each time in the file tab and load every time with the &quot;Open...&quot; option under file. " wrappingWidth="545.595703125" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="102.404296875">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

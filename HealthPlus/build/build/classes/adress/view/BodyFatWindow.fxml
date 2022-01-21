@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adress.view.BodyFatWindowController">
+   <children>
+      <Label layoutX="137.0" layoutY="22.0" text="Body Fat Ratio/Percentage">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="51.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The percentage of fat in the body is a very important indicator of health. The body fat ratio is an index of the amount of fat in weight over the total body weight. Muscle is twice as dense as fat, therefore having a lower body fat ratio means the body is leaner and healthier. A woman's body fat ratio is higher than a man's. Enter your body fat ratio, formatted as &quot;XX%&quot;, below to find out your health status. " wrappingWidth="397.1572265625" />
+      <TextField fx:id="field" layoutX="166.0" layoutY="193.0" />
+      <Button layoutX="250.0" layoutY="241.0" mnemonicParsing="false" onAction="#enter" text="Enter" />
+      <Button layoutX="198.0" layoutY="241.0" mnemonicParsing="false" onAction="#goBack" text="Close" />
+      <RadioButton fx:id="maleButton" layoutX="51.0" layoutY="198.0" mnemonicParsing="false" text="Male ">
+         <toggleGroup>
+            <ToggleGroup fx:id="a" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="femaleButton" layoutX="51.0" layoutY="223.0" mnemonicParsing="false" text="Female" toggleGroup="$a" />
+   </children>
+</AnchorPane>

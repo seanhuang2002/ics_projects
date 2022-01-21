@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PopupWindowController">
+   <children>
+      <ImageView fx:id="absurdeView" fitHeight="238.0" fitWidth="244.0" layoutX="78.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="78.0" />
+      <Label layoutX="116.0" layoutY="42.0" text="Absurde : Art Visuel">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="138.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guernica de Picasso" />
+      <Button layoutX="169.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />   </children>
+</AnchorPane>

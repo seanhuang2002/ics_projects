@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KitchenTableController">
+   <children>
+      <TabPane fx:id="tabpane" prefHeight="600.0" prefWidth="901.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab styleClass="label-header" text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c3edf2" height="541.0" layoutX="15.0" layoutY="13.0" stroke="#00000005" strokeType="INSIDE" width="871.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="201.0" layoutX="96.0" layoutY="283.0" stroke="TRANSPARENT" strokeType="INSIDE" width="231.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="78.0" layoutX="96.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="712.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="202.0" layoutX="335.0" layoutY="284.0" stroke="TRANSPARENT" strokeType="INSIDE" width="245.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="204.0" layoutX="587.0" layoutY="283.0" stroke="TRANSPARENT" strokeType="INSIDE" width="230.0" />
+                        <Button layoutX="80.0" layoutY="495.0" mnemonicParsing="false" onAction="#quit" text="Close" />
+                        <Text layoutX="128.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our goal is to promote the secondary consequences of one's alimentary comsumption and diet. This includes the environmental consequences of certain types of food such as meats, and a tool with which one can better budget their finances whilst making purchases." wrappingWidth="667.0880737304688">
+                           <font>
+                              <Font name="Songti TC Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="129.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO YOUR KITCHEN TABLE" wrappingWidth="646.5515747070312">
+                           <font>
+                              <Font name="Songti TC Regular" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="401.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAVIGATE" wrappingWidth="99.51017761230469">
+                           <font>
+                              <Font name="Songti TC Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <GridPane layoutX="106.0" layoutY="295.0" prefHeight="180.0" prefWidth="710.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.35836791992188" minWidth="10.0" prefWidth="209.00796508789062" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.30886840820312" minWidth="10.0" prefWidth="30.1456298828125" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.80319213867188" minWidth="10.0" prefWidth="221.8543701171875" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.30889892578125" minWidth="10.0" prefWidth="29.751953125" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.8543701171875" minWidth="10.0" prefWidth="217.248046875" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#navigateMM" prefHeight="204.0" prefWidth="210.0" text="Money Manager" />
+                              <Button mnemonicParsing="false" onAction="#navigateFC" prefHeight="188.0" prefWidth="222.0" text="Food Consumption" GridPane.columnIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#navigateEI" prefHeight="180.0" prefWidth="210.0" text="Environmental Impact" GridPane.columnIndex="4" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="mm" styleClass="label-header" text="Grocery List &amp; Money Manager">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b3c4e580" height="439.0" layoutX="20.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" width="376.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b3c4e37d" height="439.0" layoutX="423.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" width="465.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="96.0" layoutX="423.0" layoutY="453.0" stroke="BLACK" strokeType="INSIDE" width="465.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffca5ead" height="45.0" layoutX="118.0" layoutY="16.0" stroke="#00000002" strokeType="INSIDE" width="200.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffca5ead" height="42.0" layoutX="559.0" layoutY="19.0" stroke="#00000002" strokeType="INSIDE" width="207.0" />
+                        <TextField fx:id="t1" layoutX="74.0" layoutY="165.0" prefHeight="40.0" prefWidth="144.0" />
+                        <TextField fx:id="q1" layoutX="263.0" layoutY="164.0" onKeyTyped="#firstQuantity" prefHeight="40.0" prefWidth="85.0" />
+                        <Label layoutX="124.0" layoutY="129.0" text="ITEM" />
+                        <Label layoutX="257.0" layoutY="130.0" text="QUANTITY" />
+                        <TextField fx:id="t2" layoutX="74.0" layoutY="211.0" prefHeight="40.0" prefWidth="144.0" />
+                        <TextField fx:id="t3" layoutX="73.0" layoutY="258.0" prefHeight="40.0" prefWidth="145.0" />
+                        <TextField fx:id="t4" layoutX="73.0" layoutY="307.0" prefHeight="40.0" prefWidth="146.0" />
+                        <TextField fx:id="t5" layoutX="72.0" layoutY="356.0" prefHeight="40.0" prefWidth="147.0" />
+                        <TextField fx:id="t8" layoutX="72.0" layoutY="498.0" prefHeight="40.0" prefWidth="146.0" />
+                        <TextField fx:id="t6" layoutX="71.0" layoutY="405.0" prefHeight="40.0" prefWidth="147.0" />
+                        <TextField fx:id="t7" layoutX="72.0" layoutY="451.0" prefHeight="40.0" prefWidth="146.0" />
+                        <TextField fx:id="q2" layoutX="264.0" layoutY="212.0" onKeyTyped="#secondQuantity" prefHeight="40.0" prefWidth="85.0" />
+                        <TextField fx:id="q3" layoutX="265.0" layoutY="257.0" onKeyTyped="#thirdQuantity" prefHeight="40.0" prefWidth="84.0" />
+                        <TextField fx:id="q4" layoutX="264.0" layoutY="307.0" onKeyTyped="#fourthQuantity" prefHeight="40.0" prefWidth="84.0" />
+                        <TextField fx:id="q5" layoutX="264.0" layoutY="356.0" onKeyTyped="#fifthQuantity" prefHeight="40.0" prefWidth="84.0" />
+                        <TextField fx:id="q6" layoutX="264.0" layoutY="404.0" onKeyTyped="#sixthQuantity" prefHeight="40.0" prefWidth="84.0" />
+                        <TextField fx:id="q7" layoutX="265.0" layoutY="451.0" onKeyTyped="#seventhQuantity" prefHeight="40.0" prefWidth="84.0" />
+                        <TextField fx:id="q8" layoutX="265.0" layoutY="499.0" onKeyTyped="#eighthQuantity" prefHeight="40.0" prefWidth="84.0" />
+                        <Label layoutX="42.0" layoutY="176.0" text="1." />
+                        <Label layoutX="42.0" layoutY="223.0" text="2." />
+                        <Label layoutX="42.0" layoutY="269.0" text="3." />
+                        <Label layoutX="42.0" layoutY="317.0" text="4." />
+                        <Label layoutX="42.0" layoutY="368.0" text="5." />
+                        <Label layoutX="42.0" layoutY="416.0" text="6." />
+                        <Label layoutX="42.0" layoutY="463.0" text="7." />
+                        <Label layoutX="42.0" layoutY="510.0" text="8." />
+                        <Label layoutX="135.0" layoutY="32.0" text="MY GROCERY LIST">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="579.0" layoutY="32.0" text="MONEY MANAGER">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="442.0" layoutY="472.0" text="BUDGET">
+                           <font>
+                              <Font size="9.0" />
+                           </font></Label>
+                        <TextField fx:id="budget" layoutX="526.0" layoutY="466.0" onKeyTyped="#budget" prefHeight="30.0" prefWidth="140.0" promptText="0.00" />
+                        <Button fx:id="calculate" layoutX="703.0" layoutY="465.0" mnemonicParsing="false" onAction="#calculateTotal" prefHeight="28.0" prefWidth="174.0" text="Calculate Total" />
+                        <Label fx:id="information" layoutX="430.0" layoutY="502.0" prefHeight="16.0" prefWidth="450.0" />
+                        <GridPane layoutX="449.0" layoutY="143.0" prefHeight="307.0" prefWidth="421.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.5927734375" minWidth="10.0" prefWidth="122.5927734375" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.289794921875" minWidth="10.0" prefWidth="58.4072265625" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.22991943359375" minWidth="10.0" prefWidth="134.12371826171875" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.82244873046875" minWidth="10.0" prefWidth="38.92864990234375" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.82244873046875" minWidth="10.0" prefWidth="64.07135009765625" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="i1" prefHeight="20.0" prefWidth="117.0" />
+                              <Label fx:id="i3" prefHeight="16.0" prefWidth="87.0" GridPane.rowIndex="2" />
+                              <Label fx:id="i4" prefHeight="16.0" prefWidth="92.0" GridPane.rowIndex="3" />
+                              <Label fx:id="i5" prefHeight="16.0" prefWidth="88.0" GridPane.rowIndex="4" />
+                              <Label fx:id="i6" prefHeight="16.0" prefWidth="89.0" GridPane.rowIndex="5" />
+                              <Label fx:id="i7" prefHeight="16.0" prefWidth="89.0" GridPane.rowIndex="6" />
+                              <Label fx:id="i8" prefHeight="16.0" prefWidth="87.0" GridPane.rowIndex="7" />
+                              <Label fx:id="qu1" prefHeight="16.0" prefWidth="44.0" GridPane.columnIndex="1" />
+                              <Label fx:id="qu3" prefHeight="16.0" prefWidth="56.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="qu4" prefHeight="16.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="qu5" prefHeight="16.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="qu6" prefHeight="16.0" prefWidth="57.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="qu7" prefHeight="16.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="qu8" prefHeight="16.0" prefWidth="57.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label fx:id="i2" prefHeight="16.0" prefWidth="85.0" GridPane.rowIndex="1" />
+                              <Label fx:id="qu2" prefHeight="16.0" prefWidth="56.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="s8" prefHeight="16.0" prefWidth="62.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                              <TextField fx:id="p1" onKeyTyped="#firstPrice" onMouseClicked="#textClear" prefHeight="26.0" prefWidth="37.0" promptText="0.00" GridPane.columnIndex="2" />
+                              <TextField fx:id="p2" onKeyTyped="#secondPrice" promptText="0.00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="p3" onKeyTyped="#thirdPrice" promptText="0.00" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField fx:id="p4" onKeyTyped="#fourthPrice" promptText="0.00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <TextField fx:id="p5" onKeyTyped="#fifthPrice" promptText="0.00" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <TextField fx:id="p6" onKeyTyped="#sixthPrice" promptText="0.00" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <TextField fx:id="p7" onKeyTyped="#seventhPrice" promptText="0.00" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <TextField fx:id="p8" onKeyTyped="#eighthPrice" promptText="0.00" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <Label fx:id="s7" prefHeight="16.0" prefWidth="109.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                              <Label fx:id="s1" prefHeight="16.0" prefWidth="74.0" textAlignment="RIGHT" GridPane.columnIndex="4" />
+                              <Label fx:id="s2" prefHeight="16.0" prefWidth="75.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <Label fx:id="s3" prefHeight="16.0" prefWidth="78.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <Label fx:id="s4" prefHeight="16.0" prefWidth="74.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                              <Label fx:id="s5" prefHeight="16.0" prefWidth="85.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                              <Label fx:id="s6" prefHeight="16.0" prefWidth="81.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                              <Label fx:id="rest1" prefHeight="20.0" prefWidth="57.0" GridPane.columnIndex="3" />
+                              <Label fx:id="rest2" prefHeight="20.0" prefWidth="70.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label fx:id="rest3" prefHeight="20.0" prefWidth="43.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label fx:id="rest5" prefHeight="20.0" prefWidth="41.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Label fx:id="rest6" prefHeight="20.0" prefWidth="43.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <Label fx:id="rest7" prefHeight="20.0" prefWidth="54.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <Label fx:id="rest8" prefHeight="20.0" prefWidth="40.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                              <Label fx:id="rest4" prefHeight="20.0" prefWidth="41.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Label layoutX="455.0" layoutY="121.0" text="ITEM" />
+                        <Label layoutX="537.0" layoutY="119.0" text="QUANTITY" />
+                        <Label layoutX="672.0" layoutY="120.0" text="PRICE" />
+                        <Label layoutX="822.0" layoutY="117.0" text="\$">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="done" layoutX="135.0" layoutY="70.0" mnemonicParsing="false" onAction="#getItems" text="Done">
+                           <font>
+                              <Font name="Apple Braille" size="13.0" />
+                           </font></Button>
+                        <Label layoutX="465.0" layoutY="65.0" prefHeight="40.0" prefWidth="390.0" text="The total cost of grocery items includes a 13% tax ." />
+                        <Label fx:id="information2" layoutX="432.0" layoutY="518.0" prefHeight="16.0" prefWidth="446.0" />
+                        <Button fx:id="clear" layoutX="220.0" layoutY="70.0" mnemonicParsing="false" onAction="#clearItems" text="Clear" />
+                        <Label fx:id="checkbudget" layoutX="672.0" layoutY="471.0" prefHeight="20.0" prefWidth="24.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="fc" styleClass="label-header" text="My Food Consumption">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff02" height="509.0" layoutX="14.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="870.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b6d6b3d4" height="488.0" layoutX="22.0" layoutY="54.0" stroke="#00000001" strokeType="INSIDE" width="423.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b5d4b2c7" height="486.0" layoutX="452.0" layoutY="55.0" stroke="#00000001" strokeType="INSIDE" width="423.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="45.0" layoutX="141.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" width="169.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="42.0" layoutX="583.0" layoutY="63.0" stroke="BLACK" strokeType="INSIDE" width="169.0" />
+                        <Label layoutX="165.0" layoutY="15.0" prefHeight="20.0" prefWidth="477.0" text="ENVIRONMENTAL IMPACTS OF FOOD CONSUMPTION" />
+                        <Label layoutX="635.0" layoutY="74.0" text="MEATS" />
+                        <Label layoutX="172.0" layoutY="83.0" text="BEVERAGES" />
+                        <GridPane layoutX="469.0" layoutY="135.0" prefHeight="376.0" prefWidth="371.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.99530029296875" minWidth="10.0" prefWidth="56.04718017578125" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.06951904296875" minWidth="10.0" prefWidth="101.95281982421875" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="65.0" text="Chicken" />
+                              <Label text="Beef" GridPane.rowIndex="1" />
+                              <Label text="Lamb" GridPane.rowIndex="2" />
+                              <Label text="Salmon" GridPane.rowIndex="3" />
+                              <Label text="Pork" GridPane.rowIndex="4" />
+                              <Label text="Turkey" GridPane.rowIndex="5" />
+                              <TextField fx:id="chicken" onKeyTyped="#chicken" prefHeight="16.0" prefWidth="93.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="beef" onKeyTyped="#beef" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="lamb" onKeyTyped="#lamb" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="fish" onKeyTyped="#fish" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="pork" onKeyTyped="#pork" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="turkey" onKeyTyped="#turkey" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="kg" GridPane.columnIndex="2" />
+                              <Label text="kg" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label text="kg" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label text="kg" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label text="kg" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label text="kg" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Button mnemonicParsing="false" onAction="#addChicken" prefHeight="28.0" prefWidth="117.0" text="Calculate" GridPane.columnIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#addBeef" prefHeight="28.0" prefWidth="107.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#addLamb" prefHeight="28.0" prefWidth="103.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#addSalmon" prefHeight="28.0" prefWidth="103.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#addPork" prefHeight="28.0" prefWidth="103.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Button mnemonicParsing="false" onAction="#addTurkey" prefHeight="28.0" prefWidth="109.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="44.0" layoutY="137.0" prefHeight="378.0" prefWidth="372.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="104.0" text="Milk" />
+                              <Label text="Coffee" GridPane.rowIndex="1" />
+                              <Label text="Apple Juice" GridPane.rowIndex="2" />
+                              <Label text="Soft Drinks" GridPane.rowIndex="3" />
+                              <Label text="Water" GridPane.rowIndex="4" />
+                              <Label text="Vodka" GridPane.rowIndex="5" />
+                              <TextField fx:id="milk" onKeyTyped="#milk" prefHeight="16.0" prefWidth="93.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="coffee" onKeyTyped="#coffee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="applej" onKeyTyped="#applej" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="softdrink" onKeyTyped="#softdrink" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="water" onKeyTyped="#water" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="tea" onKeyTyped="#tea" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="L" GridPane.columnIndex="2" />
+                              <Label text="L" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label text="L" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label text="L" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label text="L" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label text="L" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Button mnemonicParsing="false" onAction="#addMilk" prefHeight="28.0" prefWidth="112.0" text="Calculate" GridPane.columnIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#addCoffee" prefHeight="28.0" prefWidth="112.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#addAppleJuice" prefHeight="28.0" prefWidth="114.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#addSoftDrink" prefHeight="28.0" prefWidth="113.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#addWater" prefHeight="28.0" prefWidth="120.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Button mnemonicParsing="false" onAction="#addVodka" prefHeight="28.0" prefWidth="124.0" text="Calculate" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.99530029296875" minWidth="10.0" prefWidth="52.93988037109375" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.06951904296875" minWidth="10.0" prefWidth="107.06011962890625" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <Button layoutX="665.0" layoutY="12.0" mnemonicParsing="false" onAction="#navigateEI" text="See Impact" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="ei" styleClass="label-header" text="Environmental Impacts">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2181ff2a" height="442.0" layoutX="20.0" layoutY="104.0" stroke="#00000003" strokeType="INSIDE" width="861.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff212136" height="77.0" layoutX="20.0" layoutY="14.0" stroke="#00000003" strokeType="INSIDE" width="863.0" />
+                        <Label layoutX="197.0" layoutY="41.0" text="ENVIRONMENTAL IMPACTS AND CARBON FOOTPRINTS" />
+                        <GridPane layoutX="53.0" layoutY="151.0" prefHeight="337.0" prefWidth="836.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.47593688964844" minWidth="10.0" prefWidth="99.48847961425781" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.4786376953125" minWidth="10.0" prefWidth="57.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.28741455078125" minWidth="10.0" prefWidth="66.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.75198364257812" minWidth="10.0" prefWidth="201.40159606933594" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.90777587890625" minWidth="10.0" prefWidth="106.6414794921875" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.38507080078125" minWidth="10.0" prefWidth="90.9161376953125" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.90557861328125" minWidth="10.0" prefWidth="94.0838623046875" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.4334716796875" minWidth="10.0" prefWidth="118.91351318359375" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="45.23797607421875" minHeight="10.0" prefHeight="45.23797607421875" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Cow Milk" GridPane.rowIndex="1" />
+                              <Label text="Coffee" GridPane.rowIndex="2" />
+                              <Label text="Apple Juice" GridPane.rowIndex="3" />
+                              <Label text="Soft Drink" GridPane.rowIndex="4" />
+                              <Label text="Water" GridPane.rowIndex="5" />
+                              <Label text="Vodka" GridPane.rowIndex="6" />
+                              <Label text="Chicken" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <Label text="Beef" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <Label text="Lamb" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                              <Label text="Salmon" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                              <Label text="Pork" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                              <Label text="Turkey" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                              <Label text="TYPE" />
+                              <Label text="TYPE" GridPane.columnIndex="4" />
+                              <Label text="L" GridPane.columnIndex="1" />
+                              <Label text="#" GridPane.columnIndex="5" />
+                              <Label fx:id="chickeno" prefHeight="20.0" prefWidth="113.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <Label text="kg of methane" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                              <Label fx:id="beefo" text="0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                              <Label fx:id="lambo" text="0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                              <Label fx:id="fisho" text="0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                              <Label fx:id="porko" text="0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                              <Label fx:id="turkeyo" text="0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                              <Label fx:id="chickene" prefHeight="20.0" prefWidth="153.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <Label fx:id="beefe" prefHeight="20.0" prefWidth="155.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                              <Label fx:id="lambe" prefHeight="20.0" prefWidth="156.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                              <Label fx:id="fishe" prefHeight="20.0" prefWidth="160.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                              <Label fx:id="porke" prefHeight="20.0" prefWidth="155.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                              <Label fx:id="turkeye" prefHeight="20.0" prefWidth="158.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                              <Label fx:id="milko" prefHeight="20.0" prefWidth="63.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="coffeeo" prefHeight="20.0" prefWidth="63.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="applejo" prefHeight="20.0" prefWidth="64.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="softdrinko" prefHeight="20.0" prefWidth="64.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="watero" prefHeight="20.0" prefWidth="67.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="teao" prefHeight="20.0" prefWidth="67.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="milke" prefHeight="20.0" prefWidth="162.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="coffeee" prefHeight="20.0" prefWidth="159.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label fx:id="appleje" prefHeight="20.0" prefWidth="160.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label fx:id="softdrinke" prefHeight="20.0" prefWidth="160.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label fx:id="watere" prefHeight="20.0" prefWidth="168.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Label fx:id="teae" prefHeight="20.0" prefWidth="162.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Label text="kg of CO" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                              <Label text="kg of CO2" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                              <Label text="kg of CO2" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                              <Label text="kg of CO2" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                              <Label text="kg of CO2" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                              <Label prefHeight="20.0" prefWidth="147.0" text="cows affected/day" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label text="water used" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label text="years to decompose" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Label text="unrecycled plastic" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Label text="million joules of energy" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <Label text="tons of grain/1 million" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <Label text="EMISSIONS" GridPane.columnIndex="7" />
+                           </children>
+                        </GridPane>
+                        <Button layoutX="402.0" layoutY="115.0" mnemonicParsing="false" onAction="#clearData" text="Clear Data" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="310.0" layoutX="457.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Recipes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Circle fill="#eeb4b4" layoutX="385.0" layoutY="278.0" radius="255.0" stroke="#00000001" strokeType="INSIDE" />
+                        <ComboBox fx:id="cboID" layoutX="245.0" layoutY="147.0" prefHeight="26.0" prefWidth="280.0" />
+                        <TextField fx:id="txtQuantity" layoutX="385.0" layoutY="218.0" prefHeight="30.0" prefWidth="190.0" />
+                        <TextField fx:id="txtIngredient" layoutX="384.0" layoutY="270.0" />
+                        <TextField fx:id="txtMeasurement" layoutX="384.0" layoutY="317.0" />
+                        <TextField fx:id="txtDescription" layoutX="384.0" layoutY="368.0" />
+                        <TextField fx:id="txtResult" layoutX="303.0" layoutY="449.0" />
+                        <Label layoutX="269.0" layoutY="223.0" text="Quantity" />
+                        <Label layoutX="269.0" layoutY="268.0" text="Ingredient" />
+                        <Label layoutX="269.0" layoutY="322.0" text="Measurement" />
+                        <Label layoutX="269.0" layoutY="373.0" text="Description" />
+                        <Button fx:id="btnUpdate" layoutX="348.0" layoutY="88.0" mnemonicParsing="false" text="Modify" />
+                        <Button fx:id="btnDelete" layoutX="192.0" layoutY="88.0" mnemonicParsing="false" text="Delete" />
+                        <Button fx:id="btnAdd" layoutX="517.0" layoutY="88.0" mnemonicParsing="false" text="Add" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

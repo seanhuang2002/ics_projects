@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModifyItemController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="699.0" layoutY="2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1148.0" />
+      <Label layoutX="90.0" layoutY="112.0" text="SELECT ITEM" AnchorPane.bottomAnchor="546.0" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font name="Lucida Grande Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ededed" height="492.0" layoutX="609.0" layoutY="134.0" stroke="TRANSPARENT" strokeType="INSIDE" width="431.0" AnchorPane.bottomAnchor="74.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="134.0" />
+      <Label layoutX="681.0" layoutY="187.0" prefHeight="36.0" prefWidth="281.0" text="MODIFY ITEM" textAlignment="CENTER" AnchorPane.leftAnchor="681.0" AnchorPane.rightAnchor="188.0" AnchorPane.topAnchor="187.0">
+         <font>
+            <Font name="Lucida Grande Bold" size="30.0" />
+         </font>
+      </Label>
+      <Line endX="149.5" layoutX="824.0" layoutY="173.0" startX="-149.5" strokeWidth="2.5" AnchorPane.leftAnchor="682.75" AnchorPane.rightAnchor="165.25" AnchorPane.topAnchor="171.75" />
+      <Button fx:id="proceedToCheckoutBut" layoutX="694.0" layoutY="551.0" mnemonicParsing="false" onAction="#saveChanges" prefHeight="40.0" prefWidth="281.0" text="SAVE CHANGES" AnchorPane.topAnchor="551.0">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Button>
+      <Line endX="350.0" layoutX="287.0" layoutY="191.0" startX="-100.0" strokeWidth="2.5" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="170.75" />
+      <Label layoutX="100.0" layoutY="74.0" text="MODIFYING ITEM" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="74.0">
+         <font>
+            <Font name="Lucida Grande Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeBut" layoutX="925.0" layoutY="65.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="123.0" text="BACK" AnchorPane.topAnchor="65.0" />
+      <Line endX="299.0" layoutX="674.0" layoutY="527.0" startX="-0.0" strokeWidth="2.5" AnchorPane.leftAnchor="682.75" AnchorPane.rightAnchor="165.75" />
+      <TextField fx:id="scanBarcodeField" layoutX="108.0" layoutY="551.0" prefHeight="40.0" prefWidth="259.0" promptText="SCAN BARCODE" AnchorPane.leftAnchor="108.0" />
+      <GridPane layoutX="680.0" layoutY="254.0" prefHeight="237.0" prefWidth="310.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.5296630859375" minWidth="10.0" prefWidth="120.94268798828125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.29248046875" minWidth="10.0" prefWidth="178.05731201171875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="barcodeField" maxHeight="40.0" prefHeight="40.0" promptText="BARCODE ID" GridPane.columnIndex="1" />
+            <TextField fx:id="nameField" maxHeight="40.0" prefHeight="40.0" promptText="PRODUCT NAME" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="priceField" maxHeight="40.0" prefHeight="40.0" promptText="PRODUCT PRICE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="BARCODE :">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="NAME : " GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Grande Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="PRICE : " GridPane.rowIndex="2">
+               <font>
+                  <Font name="Lucida Grande Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="DISCOUNT :" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Lucida Grande Bold" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="discountCombo" prefHeight="40.0" prefWidth="179.0" promptText="SELECT" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button fx:id="newProductBut" layoutX="378.0" layoutY="551.0" mnemonicParsing="false" onAction="#newProduct" prefHeight="40.0" prefWidth="178.0" text="NEW PRODUCT">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Button>
+      <Line endX="350.0" layoutX="204.0" layoutY="528.0" startX="-100.0" strokeWidth="2.5" />
+      <TableView fx:id="tableView" layoutX="100.0" layoutY="205.0" prefHeight="287.0" prefWidth="453.0">
+        <columns>
+          <TableColumn fx:id="barcodeCol" prefWidth="88.0" text="Barcode " />
+          <TableColumn fx:id="nameCol" prefWidth="170.0" text="Product Name" />
+            <TableColumn fx:id="priceCol" minWidth="0.0" prefWidth="91.0" text="Price " />
+            <TableColumn fx:id="discountCol" minWidth="0.0" prefWidth="103.0" text="Discount" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

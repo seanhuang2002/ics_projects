@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PopupWindowController">
+   <children>
+      <TabPane layoutX="23.0" layoutY="65.0" prefHeight="450.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Extrait 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="105.0" layoutY="51.0" text="En attendant Godot de Beckett" AnchorPane.topAnchor="51.0" />
+                        <Label layoutX="105.0" layoutY="21.0" text="L'Absurde : Littérature" AnchorPane.topAnchor="21.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="169.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                        <VBox layoutX="40.0" layoutY="85.0" prefHeight="200.0" prefWidth="100.0" spacing="2.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estragon : Où irons-nous ?" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vladimir : Pas loin." />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estragon : Si si, allons-nous-en loin d'ici ! " />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vladimir : On ne peut pas. " />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estragon : Pourquoi ?" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vladimir : Il faut revenir demain." />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estragon : Pour quoi faire ?" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vladimir : Attendre Godot." />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estragon : C'est vrai. (Un temps.) Il n'est pas venu ?" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vladimir : Non." />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estragon : Et maintenant il est trop tard. " />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vladimir : Oui, c'est la nuit. " />
+                              <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estragon : Et si on le laissait tomber ? (Un temps.) Si on le laissait tomber ?" wrappingWidth="320.45947265625" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Extrait 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="108.0" layoutY="20.0" text="L'Absurde : Littérature" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="104.0" layoutY="43.0" text="La cantatrice chauve de Ionesco" AnchorPane.topAnchor="43.0" />
+                        <Button layoutX="170.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                        <VBox layoutX="33.0" layoutY="75.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mme Martin - Comme c'est curieux ! Quelle bizarre coïncidence ! Moi aussi, Monsieur, j'ai quitté la ville de Manchester il y a cinq semaines environ." wrappingWidth="335.9423828125" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="M. Martin - J'ai pris le train d'une demie après huit le matin, qui arrive à Londres un quart avant cinq, Madame." wrappingWidth="335.36865234375" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mme Martin - Comme c'est curieux ! Comme c'est bizarre! et quelle coïncidence ! J'ai pris le même train, Monsieur, moi aussi !" wrappingWidth="331.18896484375" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="M. Martin - Mon Dieu, comme c'est curieux! Peut-être bien alors, Madame, que je vous ai vue dans le train?" wrappingWidth="334.1953125" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mme Martin - C'est bien possible, ce n'est pas exclu, c'est plausible et, après tout, pourquoi pas ! Mais je n'en ai aucun souvenir, Monsieur." wrappingWidth="332.43017578125" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="M. Martin - Je voyageais en deuxième classe, Madame. Il n'y a pas de deuxième classe en Angleterre, mais je voyage quand même en deuxième classe." wrappingWidth="340.52587890625" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

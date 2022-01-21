@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.PopupWindowController">
+   <children>
+      <TabPane layoutX="23.0" layoutY="65.0" prefHeight="450.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Extrait 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="78.0" layoutY="57.0" text="&quot;Intolérance&quot;, l'Encyclopédie de Diderot" AnchorPane.topAnchor="51.0" />
+                        <Label layoutX="91.0" layoutY="32.0" text="Les Lumières : Littérature" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="57.0" layoutY="92.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" L’esprit ne peut acquiescer qu’à ce qui lui paraît vrai ; le cœur ne peut aimer que ce qui lui semble bon. La violence fera de l’homme un hypocrite, s’il est faible ; un martyr s’il est courageux. Faible ou courageux, il sentira l’injustice de la persécution et s’en indignera. L’instruction, la persuasion et la prière, voilà les seuls moyens légitimes d’étendre la religion. Tout moyen qui excite la haine, l’indignation et le mépris est impie. Tout moyen qui réveille les passions et qui tient à des vues intéressées, est impie. Tout moyen qui relâche les liens naturels et éloigne les pères des enfants, les frères des frères, les sœurs des sœurs est impie." wrappingWidth="286.8681640625" />
+                        <Button layoutX="169.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Extrait 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="91.0" layoutY="31.0" text="Les Lumières : Littérature" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="88.0" layoutY="64.0" text="Candide, ou l'Optimisme, de Voltaire" AnchorPane.topAnchor="51.0" />
+                        <Text layoutX="50.0" layoutY="88.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="De Candide, dit Pangloss:« Il est démontré, disait−il, que les choses ne peuvent être autrement : car, tout étant fait pour une fin, tout est nécessairement pour la meilleure fin. Remarquez bien que les nez ont été faits pour porter des lunettes, aussi avons−nous des lunettes. Les jambes sont visiblement instituées pour être chaussées, et nous avons des chausses. Les pierres ont été formées pour être taillées, et pour en faire des châteaux, aussi monseigneur a un très beau château ; le plus grand baron de la province doit être le mieux logé ; et, les cochons étant faits pour être mangés, nous mangeons du porc toute l'année : par conséquent, ceux qui ont avancé que tout est bien ont dit une sottise ; il fallait dire que tout est au mieux. » (Chapitre 1)" wrappingWidth="299.1513671875" />
+                        <Button layoutX="170.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

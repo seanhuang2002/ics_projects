@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;application.Order.cusIdProperty&apos; in &apos;application.Order&apos;&#x0A;- Original project: &apos;EvaluationDeBaseDeDonnees&apos;&#x0A;- Original element: &apos;application.Order.cusIdProperty&apos;&#x0A;- Getter method name: &apos;getCusIdProperty&apos;&#x0A;- Setter method name: &apos;setCusIdProperty&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;cusIdProperty&apos;" flags="589830" getter="getCusIdProperty" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;application{Order.java[Order^cusIdProperty" insertion="-1" setter="setCusIdProperty" stamp="1540613507653" version="1.0" visibility="1"/>
+</session>

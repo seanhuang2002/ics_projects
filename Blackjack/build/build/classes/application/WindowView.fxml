@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="675.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <children>
+      <BorderPane prefHeight="610.0" prefWidth="510.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Blackjack">
+                     <content>
+                        <AnchorPane prefHeight="600.0" prefWidth="500.0">
+                           <children>
+                              <Label layoutX="217.0" layoutY="14.0" prefHeight="16.0" prefWidth="108.0" text="Blackjack">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#398a45" height="268.0" layoutX="27.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" width="469.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="287.0" layoutX="16.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="497.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="258.0" layoutX="16.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" width="246.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="85.0" layoutX="271.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" width="240.0" AnchorPane.rightAnchor="14.0" />
+                              <GridPane alignment="CENTER" layoutX="40.0" layoutY="354.0" prefHeight="232.0" prefWidth="194.0">
+                                 <children>
+                                    <Button fx:id="buttHitBJ" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleHit" text="Hit" />
+                                    <Button fx:id="buttStandBJ" mnemonicParsing="false" onAction="#handleStand" text="Stand" GridPane.columnIndex="1" />
+                                    <Button fx:id="buttSurrenderBJ" mnemonicParsing="false" onAction="#handleSurrender" text="Surrender" GridPane.rowIndex="2" />
+                                    <Label text="Current bet :" GridPane.rowIndex="3" />
+                                    <Label text="Your money : " GridPane.rowIndex="6" />
+                                    <Label fx:id="labelBetBJ" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label fx:id="labelTotalMonetBJ" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label text="Games lost : " GridPane.rowIndex="5" />
+                                    <Label text="Games won : " GridPane.rowIndex="4" />
+                                    <Label fx:id="labelWinBJ" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="labelLossBJ" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Button fx:id="buttInsuranceBJ" mnemonicParsing="false" text="Insurance" GridPane.rowIndex="1" />
+                                    <Button fx:id="buttDoubleDownBJ" mnemonicParsing="false" text="Double Down" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="94.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Label layoutX="290.0" layoutY="519.0" text="Place your bet : " />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="163.0" layoutX="272.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" width="240.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                              <Label layoutX="320.0" layoutY="447.0" text="Welcome to Blackjack! " />
+                              <HBox layoutX="289.0" layoutY="476.0" prefHeight="27.0" prefWidth="205.0" spacing="7.0">
+                                 <children>
+                                    <Button fx:id="buttInstructionsBJ" mnemonicParsing="false" onAction="#handleInstructionsBJ" text="Instructions" />
+                                    <Button fx:id="buttDealBJ" mnemonicParsing="false" onAction="#handleDealBJ" text="Deal" />
+                                    <Button fx:id="buttAboutBJ" mnemonicParsing="false" onAction="#handleAboutBJ" text="About" />
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="292.0" layoutY="347.0" prefHeight="74.0" prefWidth="199.0" spacing="6.0">
+                                 <children>
+                                    <GridPane prefHeight="46.0" prefWidth="187.0">
+                                       <children>
+                                          <Label text="Dealer :" />
+                                          <Label text="Player :" GridPane.rowIndex="1" />
+                                          <Label fx:id="labelDealerBJ" text="Label" GridPane.columnIndex="1" />
+                                          <Label fx:id="labelPlayerBJ" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <Label fx:id="labelMsgBJ" text="Label" />
+                                 </children>
+                              </VBox>
+                              <HBox layoutX="285.0" layoutY="548.0" prefHeight="26.0" prefWidth="214.0" spacing="20.0">
+                                 <children>
+                                    <TextField fx:id="fieldBetBJ" prefHeight="27.0" prefWidth="131.0" />
+                                    <Button fx:id="buttBetBJ" mnemonicParsing="false" onAction="#handleBetBJ" text="Submit" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="40.0" layoutY="207.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fx:id="viewPlayer1" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewPlayer2" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewPlayer3" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewPlayer4" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewPlayer5" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewPlayer6" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="46.0" layoutY="66.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fx:id="viewDealer11" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewDealer5" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewDealer4" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewDealer3" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewDealer2" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewDealer1" fitHeight="100.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                  <Tab text="HighLow">
+                     <content>
+                        <AnchorPane prefHeight="600.0" prefWidth="500.0">
+                           <children>
+                              <Label layoutX="217.0" layoutY="14.0" prefHeight="16.0" prefWidth="108.0" text="HighLow">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#398a45" height="293.0" layoutX="27.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" width="469.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="314.0" layoutX="16.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="497.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="160.0" layoutX="16.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" width="246.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+                              <GridPane alignment="CENTER" layoutX="40.0" layoutY="456.0" prefHeight="130.0" prefWidth="194.0">
+                                 <children>
+                                    <Label text="Current bet :" />
+                                    <Label text="Your money : " GridPane.rowIndex="3" />
+                                    <Label fx:id="labelBetHL" text="Label" GridPane.columnIndex="1" />
+                                    <Label fx:id="labelTotalMonetHL" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="Games lost : " GridPane.rowIndex="2" />
+                                    <Label text="Games won : " GridPane.rowIndex="1" />
+                                    <Label fx:id="labelWinHL" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="labelLossHL" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="94.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Label layoutX="290.0" layoutY="519.0" text="Place your bet : " />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="160.0" layoutX="272.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" width="240.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                              <Label layoutX="323.0" layoutY="447.0" text="Welcome to HighLow! " />
+                              <HBox layoutX="314.0" layoutY="476.0" prefHeight="27.0" prefWidth="153.0" spacing="7.0">
+                                 <children>
+                                    <Button fx:id="buttInstructionsHL" mnemonicParsing="false" onAction="#handleInstructionsHL" text="Instructions" />
+                                    <Button fx:id="buttAboutHL" mnemonicParsing="false" onAction="#handleAboutHL" text="About" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="285.0" layoutY="548.0" prefHeight="26.0" prefWidth="214.0" spacing="20.0">
+                                 <children>
+                                    <TextField fx:id="fieldBetHL" prefHeight="27.0" prefWidth="131.0" />
+                                    <Button fx:id="buttBetHL" mnemonicParsing="false" onAction="#handleBetHL" text="Submit" />
+                                 </children>
+                              </HBox>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="60.0" layoutX="14.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" width="497.0" />
+                              <Label layoutX="27.0" layoutY="391.0" text="Message:" />
+                              <Label fx:id="labelMSGHL" layoutX="97.0" layoutY="391.0" prefHeight="17.0" prefWidth="187.0" text="Label" />
+                              <HBox alignment="CENTER_LEFT" layoutX="301.0" layoutY="384.0" prefHeight="31.0" prefWidth="178.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="highHL" mnemonicParsing="false" onAction="#handleHL" text="High" />
+                                    <Button fx:id="lowHL" mnemonicParsing="false" onAction="#handleHL" text="Low" />
+                                    <Button fx:id="dealHL" mnemonicParsing="false" onAction="#dealHL" text="Deal" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="117.0" layoutY="103.0" prefHeight="198.0" prefWidth="249.0" spacing="30.0">
+                                 <children>
+                                    <ImageView fx:id="viewFirstHL" fitHeight="198.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="viewSecondHL" fitHeight="198.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Euchre">
+                     <content>
+                        <AnchorPane prefHeight="600.0" prefWidth="500.0">
+                           <children>
+                              <Label layoutX="218.0" layoutY="11.0" prefHeight="16.0" prefWidth="108.0" text="Euchre">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#398a45" height="313.0" layoutX="23.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" width="479.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="329.0" layoutX="16.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="497.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="217.0" layoutX="16.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" width="246.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="73.0" layoutX="272.0" layoutY="381.0" stroke="BLACK" strokeType="INSIDE" width="240.0" AnchorPane.rightAnchor="13.0" />
+                              <GridPane alignment="CENTER" layoutX="41.0" layoutY="389.0" prefHeight="204.0" prefWidth="193.0">
+                                 <children>
+                                    <Button fx:id="chooseSpadesE" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#checkTurnForSelectionOfCard" text="Spades" />
+                                    <Button fx:id="chooseDiaE" mnemonicParsing="false" onAction="#checkTurnForSelectionOfCard" text="Diamonds" GridPane.columnIndex="1" />
+                                    <Label text="Current bet :" GridPane.rowIndex="3" />
+                                    <Label text="Your money : " GridPane.rowIndex="6" />
+                                    <Label fx:id="labelBetE" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label fx:id="labelTotalMoneyE" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label text="Games lost : " GridPane.rowIndex="5" />
+                                    <Label text="Games won : " GridPane.rowIndex="4" />
+                                    <Label fx:id="labelGamesWonE" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="labelGamesLostE" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Button fx:id="chooseHeartsE" mnemonicParsing="false" onAction="#checkTurnForSelectionOfCard" text="Hearts" GridPane.rowIndex="1" />
+                                    <Button fx:id="chooseClubsE" mnemonicParsing="false" onAction="#checkTurnForSelectionOfCard" text="Clubs" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button fx:id="choosePassE" mnemonicParsing="false" onAction="#checkTurnForSelectionOfCard" text="Pass" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="94.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Label layoutX="289.0" layoutY="521.0" text="Place your bet : " />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fee9d00" height="138.0" layoutX="272.0" layoutY="437.0" stroke="BLACK" strokeType="INSIDE" width="240.0" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="13.0" />
+                              <Label layoutX="320.0" layoutY="470.0" text="Welcome to Euchre! " />
+                              <HBox layoutX="289.0" layoutY="491.0" prefHeight="27.0" prefWidth="205.0" spacing="7.0">
+                                 <children>
+                                    <Button fx:id="instructionsE" mnemonicParsing="false" onAction="#handleInstructionsE" text="Instructions" />
+                                    <Button fx:id="dealE" mnemonicParsing="false" onAction="#dealCardsE" text="Deal" />
+                                    <Button fx:id="aboutE" mnemonicParsing="false" onAction="#handleAboutE" text="About" />
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="292.0" layoutY="383.0" prefHeight="65.0" prefWidth="199.0" spacing="3.0">
+                                 <children>
+                                    <GridPane prefHeight="46.0" prefWidth="187.0">
+                                       <children>
+                                          <Label text="Your team :" />
+                                          <Label text="Opponents : " GridPane.rowIndex="1" />
+                                          <Label fx:id="labelTricksWonE" text="label" GridPane.columnIndex="1" />
+                                          <Label fx:id="labelTricksLostE" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <Label fx:id="labelMSGE" text="Label" />
+                                 </children>
+                              </VBox>
+                              <HBox layoutX="285.0" layoutY="541.0" prefHeight="26.0" prefWidth="214.0" spacing="20.0">
+                                 <children>
+                                    <TextField fx:id="fieldBetE" prefHeight="27.0" prefWidth="131.0" />
+                                    <Button fx:id="submitBetE" mnemonicParsing="false" onAction="#handleBet" text="Submit" />
+                                 </children>
+                              </HBox>
+                              <RadioButton fx:id="goAloneE" layoutX="350.0" layoutY="575.0" mnemonicParsing="false" text="Go alone" />
+                              <HBox layoutX="100.0" layoutY="260.0" prefHeight="64.0" prefWidth="325.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fx:id="playerCard1E" fitHeight="94.0" fitWidth="61.0" onMouseClicked="#view1" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="playerCard2E" fitHeight="94.0" fitWidth="61.0" onMouseClicked="#view2" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="playerCard3E" fitHeight="94.0" fitWidth="61.0" onMouseClicked="#view3" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="playerCard4E" fitHeight="94.0" fitWidth="61.0" onMouseClicked="#view4" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="playerCard5E" fitHeight="94.0" fitWidth="61.0" onMouseClicked="#view5" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                              <ImageView fx:id="centreCard1E" fitHeight="94.0" fitWidth="61.0" layoutX="163.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="centreCard2E" fitHeight="94.0" fitWidth="61.0" layoutX="230.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="centreCard4E" fitHeight="94.0" fitWidth="61.0" layoutX="230.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="centreCard3E" fitHeight="94.0" fitWidth="61.0" layoutX="296.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleResetMoney" text="Reset Money" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

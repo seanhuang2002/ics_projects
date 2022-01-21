@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.PopupWindowController">
+   <children>
+      <Label layoutX="98.0" layoutY="27.0" text="Humanisme : Littérature">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="58.0" text="Gargantua de Rabelais" />
+      <Text layoutX="34.0" layoutY="101.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;En cest estat passa jusques à un an et dix moys, onquel temps, par le conseil des médecins, on commença le porter, et fut faicte une belle charrette à beufs par l’invention de Jehan Denyau. Dedans icelle on le pourmenoit par cy par là joyeusement; et le faisoit bon veoir, car il portoir bonne troigne et avoit presque dix et huyt mentons; et ne crioit que bien peu; mais il se conchioit à toutes heures, car il estoit merveilleusement phlegmaticque des fesses, tant de sa complexion naturelle que de la disposition accidentale qui luy estoit advenue par trop humer de purée septembrale.&quot;" wrappingWidth="333.892578125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="169.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+   </children>
+</AnchorPane>

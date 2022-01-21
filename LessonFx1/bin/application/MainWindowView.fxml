@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <children>
+      <Label fx:id="label" layoutX="39.0" layoutY="57.0" prefHeight="65.0" prefWidth="422.0" text="Écrivez votre nom" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSoumettre" layoutX="363.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleSoumettre" text="Soumettre" />
+      <TextField fx:id="field" layoutX="167.0" layoutY="137.0" />
+   </children>
+</AnchorPane>

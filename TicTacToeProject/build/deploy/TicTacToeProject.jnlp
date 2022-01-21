@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TicTacToeProject.jnlp">
+  <information>
+    <title>TicTacToeProject</title>
+    <vendor>S.Huang</vendor>
+    <description>TicTacToe</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TicTacToeProject.jar" size="9669" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="application.Main"  name="TicTacToe" />
+  <update check="background"/>
+</jnlp>

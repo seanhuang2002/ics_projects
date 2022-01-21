@@ -1,0 +1,10 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+.button{
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #000000;
+}
+
+.body {
+	font-family: 'Open Sans', sans-serif;
+}

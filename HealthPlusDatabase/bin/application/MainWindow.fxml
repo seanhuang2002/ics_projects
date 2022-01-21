@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TableView fx:id="tableView" onMouseClicked="#onClickedTable" prefHeight="312.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="columnID" prefWidth="31.0" text="ID" />
+                  <TableColumn prefWidth="188.0" text="Date">
+                     <columns>
+                        <TableColumn fx:id="columnMonth" prefWidth="48.0" text="Month" />
+                        <TableColumn fx:id="columnDay" prefWidth="41.0" text="Day" />
+                        <TableColumn fx:id="columnYear" prefWidth="49.0" text="Year" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Physical Attributes">
+                     <columns>
+                      <TableColumn fx:id="columnHeight" prefWidth="53.0" text="Height" />
+                        <TableColumn fx:id="columnWeight" prefWidth="59.0" text="Weight" />
+                        <TableColumn fx:id="columnWaist" prefWidth="53.0" text="Waist" />
+                        <TableColumn fx:id="columnBodyFat" prefWidth="65.0" text="Body Fat" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="188.0" text="Blood Pressure">
+                     <columns>
+                        <TableColumn fx:id="columnSys" prefWidth="58.0" text="Systolic" />
+                        <TableColumn fx:id="columnDia" prefWidth="64.0" text="Diastolic" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Other">
+                     <columns>
+                        <TableColumn fx:id="columnBloodSugar" prefWidth="81.0" text="Blood Sugar" />
+                        <TableColumn fx:id="columnHeartRate" prefWidth="76.0" text="Heart Rate" />
+                        <TableColumn fx:id="columnBMI" prefWidth="72.0" text="BMI" />
+                     </columns>
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="305.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="14.0" layoutY="14.0" prefHeight="279.0" prefWidth="553.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="147.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="344.0" minWidth="10.0" prefWidth="344.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="0.0" prefWidth="14.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="47.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Date:" />
+                        <Label text="Height:" GridPane.rowIndex="1" />
+                        <Label text="Weight:" GridPane.rowIndex="2" />
+                        <Label text="Waist Circumference:" GridPane.rowIndex="3" />
+                        <Label text="Body Fat Percentage:" GridPane.rowIndex="4" />
+                        <Label text="Blood Pressure:" GridPane.rowIndex="5" />
+                        <Label text="Blood Sugar:" GridPane.rowIndex="6" />
+                        <Label text="Resting Heart Rate:" GridPane.rowIndex="7" />
+                        <Label text="Body Mass Index:" GridPane.rowIndex="8" />
+                        <TextField fx:id="fieldHeight" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="fieldWeight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="fieldWaist" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="fieldBodyFat" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="fieldBloodSugar" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="fieldHeartRate" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="fieldBMI" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label text="m" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label text="kg" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label text="cm" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label text="\%" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label text="mmol/L" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <Label text="bpm" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <TextField fx:id="fieldMonth" promptText="Month" />
+                              <TextField fx:id="fieldDay" promptText="Day" />
+                              <TextField fx:id="fieldYear" promptText="Year" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <TextField fx:id="fieldSys" prefWidth="172.0" promptText="Systolic" />
+                              <TextField fx:id="fieldDia" prefWidth="172.0" promptText="Diastolic" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <VBox alignment="CENTER" layoutX="587.0" layoutY="14.0" prefHeight="99.0" prefWidth="142.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label text="Selected Entry:" />
+                              <Label fx:id="selectedID" alignment="CENTER" text="None" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="buttEdit" mnemonicParsing="false" onAction="#handleEdit" text="Edit Entry" />
+                        <Button fx:id="buttDelete" mnemonicParsing="false" onAction="#handleDelete" text="Delete Entry" />
+                        <Button fx:id="buttNew" mnemonicParsing="false" onAction="#handleNew" text="New Entry" />
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="fieldMSG" layoutX="581.0" layoutY="153.0" prefHeight="99.0" prefWidth="154.0" />
+                  <Button fx:id="buttSubmit" layoutX="627.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

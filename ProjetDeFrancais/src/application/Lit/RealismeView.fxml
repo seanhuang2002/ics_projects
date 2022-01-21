@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PopupWindowController">
+   <children>
+      <Label layoutX="110.0" layoutY="29.0" text="Réalisme : Littérature" AnchorPane.topAnchor="29.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="61.0" text="Mada Bovary de Flaubert" AnchorPane.topAnchor="61.0" />
+      <Button layoutX="169.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" AnchorPane.bottomAnchor="32.0" />
+      <Text layoutX="47.0" layoutY="100.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le château, de construction moderne, à l'italienne, avec deux ailes avançant et trois perrons se déployait au bas d'une immense pelouse où paissaient quelques vaches, entre des bouquets de grands arbres espacés, tandis que des bannettes d'arbustes, rhododendrons, seringas et boules-de-neige bombaient leurs touffes de verdure inégales sur la ligne courbe du chemin sablé. Une rivière passait sous un pont ; à travers la brume, on distinguait des bâtiments à toit de chaume, éparpillés dans la prairie, que bordaient en pente douce deux coteaux couverts de bois, et par-derrière, dans les massifs, se tenaient, sur deux lignes parallèles, les remises et les écuries, restes conservés de l'ancien château démoli." wrappingWidth="305.38427734375" />
+   </children>
+</AnchorPane>

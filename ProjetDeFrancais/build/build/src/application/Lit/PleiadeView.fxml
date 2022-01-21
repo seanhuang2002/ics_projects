@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.PopupWindowController">
+   <children>
+      <TabPane layoutX="36.0" layoutY="125.0" prefHeight="450.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Extrait 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="47.0" layoutY="51.0" text="À l'ambitieux et l'avare ennemi des bonnes lettres:" AnchorPane.topAnchor="51.0" />
+                        <Label layoutX="117.0" layoutY="20.0" text="Pléiade : Littérature" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="73.0" layoutY="98.0" prefHeight="221.0" prefWidth="257.0" spacing="2.0">
+                           <children>
+                              <Label text="Serf de Faveur, esclave d'Avarice, " />
+                              <Label text="Tu n'eus jamais sur toi-même pouvoir," />
+                              <Label text="Et je me veux d'un tel maître pourvoir" />
+                              <Label text="Que l'Esprit libre en plaisir se nourrisse." />
+                              <Label />
+                              <Label text="L'Air, la Fortune et l'humaine Police" />
+                              <Label text="Ont en leurs mains ton malheureux avoir." />
+                              <Label text="Le Juge avare ici n'a rien à voir," />
+                              <Label text="Ni les trois Soeurs, ni du Temps la malice," />
+                              <Label />
+                              <Label text="Regarde donc qui est plus souhaitable," />
+                              <Label text="L'aise ou l'ennui, le certain ou l'instable." />
+                              <Label text="Quant à l'honneur, j'espère être immortel" />
+                           </children>
+                        </VBox>
+                        <Button layoutX="169.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Extrait 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="117.0" layoutY="20.0" text="Pléiade : Littérature" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="132.0" layoutY="51.0" text="A Cupidon de Ronsard" AnchorPane.topAnchor="51.0" />
+                        <VBox layoutX="116.0" layoutY="89.0" prefHeight="264.0" prefWidth="170.0" spacing="2.0">
+                           <children>
+                              <Label text="Le jour pousse la nuit," />
+                              <Label text="Et la nuit sombre" />
+                              <Label text="Pousse le jour qui luit" />
+                              <Label text="D'une obscure ombre." />
+                              <Label />
+                              <Label text="L'Autonne suit l'Esté," />
+                              <Label text="Et l'aspre rage" />
+                              <Label text="Des vents n'a point esté" />
+                              <Label text="Apres l'orage." />
+                              <Label />
+                              <Label text="Mais la fièvre d'amours" />
+                              <Label text="Qui me tourmente," />
+                              <Label text="Demeure en moy tousjours," />
+                              <Label text="Et ne s'alente." />
+                           </children>
+                        </VBox>
+                        <Button layoutX="169.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

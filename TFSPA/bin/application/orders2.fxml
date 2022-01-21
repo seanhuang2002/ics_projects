@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="699.0" layoutY="2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1148.0" />
+      <Label layoutX="89.0" layoutY="147.0" text="SHOPPING BAG" AnchorPane.leftAnchor="89.0" AnchorPane.topAnchor="147.0">
+         <font>
+            <Font name="Lucida Grande Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ededed" height="366.0" layoutX="609.0" layoutY="260.0" stroke="TRANSPARENT" strokeType="INSIDE" width="431.0" AnchorPane.bottomAnchor="74.0" AnchorPane.topAnchor="260.0" />
+      <Label layoutX="693.0" layoutY="292.0" prefHeight="36.0" prefWidth="281.0" text="ORDER SUMMARY" textAlignment="CENTER" AnchorPane.topAnchor="292.0">
+         <font>
+            <Font name="Lucida Grande Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="proceedToCheckoutBut" layoutX="692.0" layoutY="551.0" mnemonicParsing="false" onAction="#proceedToCheckout" prefHeight="40.0" prefWidth="281.0" text="PROCESS ORDER" AnchorPane.topAnchor="551.0">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Button>
+      <Line endX="350.0" layoutX="191.0" layoutY="192.0" startX="-100.0" strokeWidth="2.5" AnchorPane.leftAnchor="89.75" AnchorPane.topAnchor="190.75" />
+      <Label layoutX="91.0" layoutY="42.0" text="REVIEWING BAG" AnchorPane.leftAnchor="89.0" AnchorPane.topAnchor="48.0">
+         <font>
+            <Font name="Lucida Grande Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeBut" layoutX="915.0" layoutY="39.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="123.0" text="CLOSE " AnchorPane.topAnchor="36.0" />
+      <Label fx:id="studentNameLabel" layoutX="780.0" layoutY="165.0" text="JANE DOE" AnchorPane.leftAnchor="780.0" AnchorPane.topAnchor="165.0">
+         <font>
+            <Font name="Lucida Grande Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="StudentIdLabel" layoutX="780.0" layoutY="203.0" text="STUDENT ID: #00000" AnchorPane.leftAnchor="780.0">
+         <font>
+            <Font name="Lucida Grande Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalPriceLabel" layoutX="833.0" layoutY="501.0" text="TOTAL: $00.00">
+         <font>
+            <Font name="Lucida Grande Bold" size="18.0" />
+         </font>
+      </Label>
+      <Line endX="135.0" layoutX="832.0" layoutY="349.0" startX="-135.0" strokeWidth="2.5" />
+      <TextField fx:id="barcodeField" layoutX="90.0" layoutY="551.0" prefHeight="40.0" prefWidth="453.0" promptText="SCAN BARCODE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 packages to &apos;HealthPlusDB/src/application&apos;&#x0A;- Original project: &apos;HealthPlus&apos;&#x0A;- Destination element: &apos;HealthPlusDB/src/application&apos;&#x0A;- Original elements:&#x0A;     HealthPlus/src/adress&#x0A;     HealthPlus/src/adress.model&#x0A;     HealthPlus/src/adress.util&#x0A;     HealthPlus/src/adress.view" description="Copy packages" destination="=HealthPlusDB/src&lt;application" element1="/src&lt;adress" element2="/src&lt;adress.model" element3="/src&lt;adress.util" element4="/src&lt;adress.view" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1539026819699" version="1.0"/>
+</session>

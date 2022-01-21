@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PopupWindowController">
+   <children>
+      <TabPane layoutX="23.0" layoutY="65.0" prefHeight="450.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Extrait 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="109.0" layoutY="51.0" text="La mala imaginaire de Molière" AnchorPane.topAnchor="51.0" />
+                        <Label layoutX="98.0" layoutY="21.0" text="Classicisme : Littérature" AnchorPane.topAnchor="21.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="169.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                        <ScrollPane layoutY="79.0" prefHeight="266.0" prefWidth="400.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="382.0" prefWidth="380.0">
+                                 <children>
+                                    <VBox layoutX="33.0" layoutY="15.0" prefHeight="352.0" prefWidth="333.0" spacing="2.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOINETTE.- Votre lavement ?" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ARGAN.- Oui. Ai-je bien fait de la bile ?" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOINETTE.- Ma foi je ne me mêle point de ces affaires-là, c’est à Monsieur Fleurant à y mettre le nez, puisqu’il en a le profit." wrappingWidth="275.59521484375" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ARGAN.- Qu’on ait soin de me tenir un bouillon prêt, pour l’autre que je dois tantôt prendre." wrappingWidth="285.59326171875" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOINETTE.- Ce Monsieur Fleurant-là, et ce Monsieur Purgon s’égayent bien [15] sur votre corps ; ils ont en vous une bonne vache à lait ; et je voudrais bien leur demander quel mal vous avez, pour vous faire tant de remèdes." wrappingWidth="283.2900390625" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ARGAN.- Taisez-vous, ignorante, ce n’est pas à vous à contrôler les ordonnances de la médecine. Qu’on me fasse venir ma fille Angélique, j’ai à lui dire quelque chose." wrappingWidth="320.130859375" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOINETTE.- La voici qui vient d’elle-même ; elle a deviné votre pensée." wrappingWidth="330.576171875" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Extrait 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="99.0" layoutY="20.0" text="Classicisme : Littérature" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="93.0" layoutY="43.0" text="À monsier le Dauphin de la Fontaine" AnchorPane.topAnchor="43.0" />
+                        <Button layoutX="170.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                        <VBox layoutX="28.0" layoutY="67.0" prefHeight="302.0" prefWidth="349.0" spacing="2.0">
+                           <children>
+                              <Label text="Je chante les Héros dont Esope est le Père," />
+                              <Label text="Troupe de qui l'Histoire, encor que mensongère," />
+                              <Label text="Contient des vérités qui servent de leçons." />
+                              <Label text="Tout parle en mon Ouvrage, et même les Poissons :" />
+                              <Label text="Ce qu'ils disent s'adresse à tous tant que nous sommes." />
+                              <Label text="Je me sers d'Animaux pour instruire les Hommes." />
+                              <Label text="Illustre rejeton d'un Prince aimé des cieux," />
+                              <Label text="Sur qui le monde entier a maintenant les yeux," />
+                              <Label text="Et qui, faisant fléchir les plus superbes Têtes," />
+                              <Label text="Comptera désormais ses jours par ses conquêtes," />
+                              <Label text="Quelque autre te dira d'une plus forte voix" />
+                              <Label text="Les faits de tes Aïeux et les vertus des Rois." />
+                              <Label text="Je vais t'entretenir de moindres Aventures," />
+                              <Label text="Te tracer en ces vers de légères peintures." />
+                              <Label text="Et, si de t'agréer je n'emporte le prix," />
+                              <Label text="J'aurai du moins l'honneur de l'avoir entrepris." />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

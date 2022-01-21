@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1000.0" maxWidth="1000.0" minHeight="400.0" minWidth="500.0" prefHeight="550.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adress.view.TableAppController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="600.0">
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Entries">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <VBox prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TableView fx:id="table" prefHeight="282.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                                      <columns>
+                                        <TableColumn fx:id="heightColumn" prefWidth="47.0" text="Height">
+                                        	<cellValueFactory>	
+                                        		<PropertyValueFactory property="height" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                        <TableColumn fx:id="weightColumn" prefWidth="50.0" text="Weight">
+                                        	<cellValueFactory>
+                                        		<PropertyValueFactory property="weight" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                         <TableColumn fx:id="dateOfBirthColumn" prefWidth="96.0" text="Date">
+                                        	<cellValueFactory>
+                                        		 <PropertyValueFactory property="dateOfBirth" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                          <TableColumn fx:id="bloodPressureColumn" prefWidth="101.0" text="Blood Pressure">
+                                        	<cellValueFactory>
+                                        		<PropertyValueFactory property="bloodPressure" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                          <TableColumn fx:id="bloodSugarColumn" prefWidth="82.0" text="Blood Sugar">
+                                        	<cellValueFactory>
+                                        		<PropertyValueFactory property="bloodSugar" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                          <TableColumn fx:id="heartRateColumn" prefWidth="74.0" text="Heart Rate">
+                                          <cellValueFactory>
+                                        		<PropertyValueFactory property="heartRate" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                          <TableColumn fx:id="waistColumn" prefWidth="47.0" text="Waist">
+                                          <cellValueFactory>
+                                        		<PropertyValueFactory property="waist" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                          <TableColumn fx:id="bodyFatColumn" prefWidth="61.0" text="Body Fat">
+                                          <cellValueFactory>
+                                        		<PropertyValueFactory property="bodyFat" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                          <TableColumn fx:id="bmiColumn" prefWidth="41.0" text="BMI">
+                                          <cellValueFactory>
+                                        		<PropertyValueFactory property="bmi" />
+                               				</cellValueFactory>
+                                		</TableColumn>
+                                      </columns>
+                                    </TableView>
+                                    <AnchorPane prefHeight="161.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <GridPane layoutX="14.0" prefHeight="272.0" prefWidth="397.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="127.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.0" minWidth="10.0" prefWidth="206.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Resting Heart Rate" GridPane.rowIndex="5" />
+                                                <Label text="Waist" GridPane.rowIndex="6" />
+                                                <Label text="Date" GridPane.rowIndex="7" />
+                                                <Label text="Body Fat Ratio" GridPane.rowIndex="8" />
+                                                <TextField fx:id="heartRateTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <TextField fx:id="waistTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <TextField fx:id="dateOfBirthTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <TextField fx:id="bodyFatTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <Label text="Blood Sugar" GridPane.rowIndex="4" />
+                                                <Label text="Blood Pressure" GridPane.rowIndex="3" />
+                                                <Label text="Weight" GridPane.rowIndex="2" />
+                                                <Label text="Height" />
+                                                <TextField fx:id="bloodSugarTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField fx:id="bloodPressureTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="weightTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="heightTextField" GridPane.columnIndex="1" />
+                                                <Label text="Body Mass Index" GridPane.rowIndex="1" />
+                                                <TextField fx:id="bmiTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                          <Button fx:id="submitButton" layoutX="473.0" layoutY="132.0" mnemonicParsing="false" onAction="#submit" text="Submit" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="473.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+                <Tab text="Statistics">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                <tabs>
+                                  <Tab text="Home">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Label layoutX="195.0" layoutY="57.0" text="Statistics &amp; Charts">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Text layoutX="97.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statics and charts are important to keep track of one's progress towards health. Seeing an imporouvment in the indicators of health is very motivating on one's journey to health. The following tabs each contain a chart showing the evolution of the namesake statistic has been from the past to present. Please note that the person's .xml profile file must be loaded in the &quot;Entries&quot; tab before pressing the load button so that the charts display accurate information." wrappingWidth="406.27001953125">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button layoutX="276.0" layoutY="380.0" mnemonicParsing="false" onAction="#graphs" text="Load" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Weight">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScatterChart fx:id="weightChart" layoutX="58.0" layoutY="41.0" prefHeight="455.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </ScatterChart>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab text="BMI">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScatterChart fx:id="bmiChart" layoutX="100.0" layoutY="34.0" prefHeight="455.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </ScatterChart>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                    <Tab text="Blood Sugar">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScatterChart fx:id="bloodSugarChart" layoutX="50.0" layoutY="28.0" prefHeight="455.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </ScatterChart>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                    <Tab text="Waist">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScatterChart fx:id="waistChart" layoutX="70.0" layoutY="28.0" prefHeight="455.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </ScatterChart>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                    <Tab text="Body Fat Ratio">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScatterChart fx:id="bodyFatChart" layoutX="59.0" layoutY="28.0" prefHeight="455.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </ScatterChart>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </center>
+                        </BorderPane>
+                     </content></Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleNew" text="New" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open..." />
+                        <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Save As" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleInstructions" text="Instructions" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

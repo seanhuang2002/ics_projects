@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.PopupWindowController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="96.0" prefHeight="450.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Extrait 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="95.0" layoutY="28.0" text="Romantisme : Littérature" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="119.0" layoutY="51.0" text="Clarisse de Chateaubriand" AnchorPane.topAnchor="51.0" />
+                        <VBox layoutX="44.0" layoutY="109.0" prefHeight="200.0" prefWidth="312.0" spacing="2.0">
+                           <children>
+                              <Label text="Oui, je me plais, Clarisse, à la saison tardive, " />
+                              <Label text="Image de cet âge où le temps m'a conduit ; " />
+                              <Label text="Du vent à tes foyers j'aime la voix plaintive " />
+                              <Label text="Durant la longue nuit. " />
+                              <Label />
+                              <Label text="Philomèle a cherché des climats plus propices ; " />
+                              <Label text="Progné fuit à son tour : sans en être attristé, " />
+                              <Label text="Des beaux jours près de toi retrouvant les délices, " />
+                              <Label text="Ton vieux cygne est resté. " />
+                           </children>
+                        </VBox>
+                        <Button layoutX="169.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Extrait 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="95.0" layoutY="28.0" text="Romantisme : Littérature" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="130.0" layoutY="51.0" text="Les Misérables d'Hugo" AnchorPane.topAnchor="51.0" />
+                        <Text layoutX="60.0" layoutY="117.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A force d'aller en avant, il parvint au point où le brouillard de la fusillade devenait  transparent. Si bien que les tirailleurs de la ligne rangés et à l'affût derrière leur levée de pavés, et les tirailleurs de la banlieue massés à l'angle de la rue, se montrèrent soudainement  quelque chose qui remuait dans la fumée. Au moment où Gavroche débarrassait de ses cartouches un sergent gisant près d'une borne, une balle frappa le cadavre." wrappingWidth="280.0" />
+                        <Button layoutX="169.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleClose" text="Fermer" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
